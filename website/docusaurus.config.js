@@ -9,9 +9,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Gloo',
-  tagline: ' A modular toolkit for building fast, reliable Web applications and libraries with Rust and Wasm ',
-  url: 'https://gloo-rs.web.app',
+  title: 'IANA SYSTEMS - AI-Human Hybrid Systems for security and analytics.',
+  tagline: ' Unique security system - Analytics - We build tools that matter most ',
+  url: 'https://www.iana.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -24,8 +24,8 @@ const config = {
     locales: ['en'],
   },
   favicon: 'img/Gloo-Logo.ico',
-  organizationName: 'rustwasm',
-  projectName: 'gloo',
+  organizationName: 'ianaio',
+  projectName: 'ianadotio',
   themeConfig: {
     navbar: {
       title: 'iana.io',
@@ -87,9 +87,14 @@ const config = {
           ],
         },
         {
-          href: 'https://github.com/rustwasm/gloo',
-          label: 'GitHub',
-          position: 'right',
+          href: 'https://analytics.iana.io',
+          label: 'Analytics',
+          position: 'left',
+        },
+        {
+          href: 'https://www.iana.io',
+          label: 'Security',
+          position: 'left',
         },
       ],
     },
@@ -101,7 +106,7 @@ const config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/DFgBACbDVG', // #gloo in Yew server
+              href: 'https://discord.gg/DFgBACb898j', // #gloo in Yew server
             },
           ],
         },
