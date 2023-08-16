@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.iana.io/blog</id>
+    <title>IANA SYSTEMS - AI-Human Hybrid Systems for security and analytics. Blog</title>
+    <updated>2022-03-11T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.iana.io/blog"/>
+    <subtitle>IANA SYSTEMS - AI-Human Hybrid Systems for security and analytics. Blog</subtitle>
+    <icon>https://www.iana.io/img/Gloo-Logo.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Gloo gets a new crate gloo-net]]></title>
+        <id>https://www.iana.io/blog/release-gloo-net</id>
+        <link href="https://www.iana.io/blog/release-gloo-net"/>
+        <updated>2022-03-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Gloo team is happy to announce a new addition to the Gloo crates family: gloo-net. It is an HTTP requests]]></summary>
+        <content type="html"><![CDATA[<p>The Gloo team is happy to announce a new addition to the Gloo crates family: <code>gloo-net</code>. It is an HTTP requests
+library built specially for WASM apps and provides idiomatic Rust bindings for the <code>fetch</code> and <code>WebSocket</code> API.
+This has been a long requested library, and it has finally arrived.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h2>
+<ul>
+<li>HTTP: complete wrappers around the browser's <code>fetch</code> API.</li>
+<li>WebSocket: complete wrappers around the browser's <code>WebSocket</code> API using Rust futures.</li>
+</ul>
+<p>We have plans to also provide wrapper for <code>XMLHttpRequest</code> in the future.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="looking-for-contributors">Looking for contributors<a href="#looking-for-contributors" class="hash-link" aria-label="Direct link to Looking for contributors" title="Direct link to Looking for contributors">​</a></h2>
+<p>Gloo project is in need of contributors. It would be really appreciated if you could contribute or raise awareness about
+the Gloo project.</p>]]></content>
+        <author>
+            <name>Muhammad Hamza</name>
+            <uri>https://github.com/hamza1311</uri>
+        </author>
+        <category label="release" term="release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Releasing v0.6.0]]></title>
+        <id>https://www.iana.io/blog/release-0.6.0</id>
+        <link href="https://www.iana.io/blog/release-0.6.0"/>
+        <updated>2022-01-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Gloo team is happy to announce a new version of Gloo: v0.6.0. Gloo is a modular toolkit for building fast, reliable]]></summary>
+        <content type="html"><![CDATA[<p>The Gloo team is happy to announce a new version of Gloo: v0.6.0. Gloo is a modular toolkit for building fast, reliable
+Web applications and libraries with Rust and WASM.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-new">What's new<a href="#whats-new" class="hash-link" aria-label="Direct link to What's new" title="Direct link to What's new">​</a></h2>
+<p>This release focuses on adding new features and crates.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-crate-gloo-worker">New crate: <code>gloo-worker</code><a href="#new-crate-gloo-worker" class="hash-link" aria-label="Direct link to new-crate-gloo-worker" title="Direct link to new-crate-gloo-worker">​</a></h3>
+<p>Gloo workers are a way to offload tasks to web workers. These are run concurrently using
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" target="_blank" rel="noopener noreferrer">web-workers</a>.</p>
+<p>This feature has been requested and overdue for a while. Gloo-worker is made by
+moving <a href="https://yew.rs/docs/concepts/agents" target="_blank" rel="noopener noreferrer"><code>yew-agent</code></a> to Gloo, while making it framework independent in the process.
+This allows us to have a neat abstraction over the browser's Web Workers API which can be consumed from anywhere.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h3>
+<p>This release has been light on new features. The only improvement is <code>gloo_utils</code> now providing a new wrapper
+to obtain the document <code>head</code>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="notable-mention-from-last-release">Notable mention from last release<a href="#notable-mention-from-last-release" class="hash-link" aria-label="Direct link to Notable mention from last release" title="Direct link to Notable mention from last release">​</a></h2>
+<p>Last release, Gloo v0.5.0 did not receive its own blog post. That released introduced one major new crate: <code>gloo-history</code>
+amongst other small improvements, which can be found in the <a href="https://github.com/rustwasm/gloo/releases/tag/0.5.0" target="_blank" rel="noopener noreferrer">GitHub changelog</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gloo-history"><code>gloo-history</code><a href="#gloo-history" class="hash-link" aria-label="Direct link to gloo-history" title="Direct link to gloo-history">​</a></h3>
+<p>Gloo history provides wrappers for browser's history API. It exposes ergonomic Rust APIs for the browser's APIs which
+can be used to build other tools. In fact, <a href="https://github.com/yewstack/yew/pull/2239" target="_blank" rel="noopener noreferrer"><code>yew-router</code></a> has been
+reworked to use <code>gloo-history</code> under-the-hood.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="looking-for-contributors">Looking for contributors<a href="#looking-for-contributors" class="hash-link" aria-label="Direct link to Looking for contributors" title="Direct link to Looking for contributors">​</a></h2>
+<p>Gloo project is in need of contributors. It would be really appreciated if you could contribute or raise awareness about
+the Gloo project.</p>]]></content>
+        <author>
+            <name>Muhammad Hamza</name>
+            <uri>https://github.com/hamza1311</uri>
+        </author>
+        <category label="release" term="release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Releasing v0.4.0]]></title>
+        <id>https://www.iana.io/blog/release-0.4.0</id>
+        <link href="https://www.iana.io/blog/release-0.4.0"/>
+        <updated>2021-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Gloo team is happy to announce a new version of Gloo: v0.4.0. Gloo is a modular toolkit for building fast, reliable]]></summary>
+        <content type="html"><![CDATA[<p>The Gloo team is happy to announce a new version of Gloo: v0.4.0. Gloo is a modular toolkit for building fast, reliable
+Web applications and libraries with Rust and WASM.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-new">What's new<a href="#whats-new" class="hash-link" aria-label="Direct link to What's new" title="Direct link to What's new">​</a></h2>
+<p>This release focuses on adding new features and crates.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h3>
+<ul>
+<li><code>gloo-utils</code> crate: <code>gloo_utils</code> wraps common <code>web_sys</code> features to provide cleaner API for accessing <code>window</code>,
+working with JS Errors, etc.</li>
+<li>Add <code>dbg!</code> equivalent in <code>gloo_console</code> for easy console.log debugging.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixes">Fixes<a href="#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes">​</a></h3>
+<ul>
+<li>Remove the unnecessary copy in <code>Blob::new</code> (<a href="https://github.com/rustwasm/gloo/pull/152" target="_blank" rel="noopener noreferrer">#152</a>)</li>
+<li>Fix dir, dirxml macros in <code>gloo-console</code> (<a href="https://github.com/rustwasm/gloo/pull/154" target="_blank" rel="noopener noreferrer">#154</a>)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="looking-for-contributors">Looking for contributors<a href="#looking-for-contributors" class="hash-link" aria-label="Direct link to Looking for contributors" title="Direct link to Looking for contributors">​</a></h2>
+<p>Gloo project is in need of contributors. It would be really appreciated if you could contribute or raise awareness about
+the Gloo project.</p>]]></content>
+        <author>
+            <name>Muhammad Hamza</name>
+            <uri>https://github.com/hamza1311</uri>
+        </author>
+        <category label="release" term="release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Releasing v0.3.0]]></title>
+        <id>https://www.iana.io/blog/release-0.3.0</id>
+        <link href="https://www.iana.io/blog/release-0.3.0"/>
+        <updated>2021-07-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Gloo team is happy to announce a new, long overdue, version of Gloo: v0.3.0.]]></summary>
+        <content type="html"><![CDATA[<p>The Gloo team is happy to announce a new, long overdue, version of Gloo: v0.3.0.
+Gloo is a modular toolkit for building fast, reliable Web applications and libraries with Rust and WASM.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-new">What's new<a href="#whats-new" class="hash-link" aria-label="Direct link to What's new" title="Direct link to What's new">​</a></h2>
+<p>This release focuses on adding new features and crates.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-crates">New crates<a href="#new-crates" class="hash-link" aria-label="Direct link to New crates" title="Direct link to New crates">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="gloo-console"><code>gloo-console</code><a href="#gloo-console" class="hash-link" aria-label="Direct link to gloo-console" title="Direct link to gloo-console">​</a></h4>
+<p><code>gloo-console</code> provides an ergonomic way to access the browser's console API using macros:</p>
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token macro property" style="color:#36acaa">log!</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"text"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>The formatting is done on the browser side. Any <code>JsValue</code> can be provided and it'll be logged as-is:</p>
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> object </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token class-name">JsValue</span><span class="token punctuation" style="color:#393A34">::</span><span class="token function" style="color:#d73a49">from</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"any JsValue can be logged"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token macro property" style="color:#36acaa">log!</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">object</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Multiple values can also be provided:</p>
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> object </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token class-name">JsValue</span><span class="token punctuation" style="color:#393A34">::</span><span class="token function" style="color:#d73a49">from</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"Some JsValue"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token macro property" style="color:#36acaa">log!</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"literal"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> object</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="gloo-dialogs"><code>gloo-dialogs</code><a href="#gloo-dialogs" class="hash-link" aria-label="Direct link to gloo-dialogs" title="Direct link to gloo-dialogs">​</a></h4>
+<p><code>gloo-dialogs</code> provides wrappers for the following functions:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert" target="_blank" rel="noopener noreferrer"><code>alert</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm" target="_blank" rel="noopener noreferrer"><code>confirm</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank" rel="noopener noreferrer"><code>prompt</code></a></li>
+</ul>
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"Hello World!"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">prompt</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"What do you want to say?"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">confirm</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"Are you sure?"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="gloo-render"><code>gloo-render</code><a href="#gloo-render" class="hash-link" aria-label="Direct link to gloo-render" title="Direct link to gloo-render">​</a></h4>
+<p><code>gloo-render</code> provides wrapper for
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame" target="_blank" rel="noopener noreferrer"><code>requestAnimationFrame</code></a>:</p>
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">request_animation_frame</span><span class="token punctuation" style="color:#393A34">(</span><span class="token closure-params closure-punctuation punctuation" style="color:#393A34">|</span><span class="token closure-params">_</span><span class="token closure-params closure-punctuation punctuation" style="color:#393A34">|</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">// inside animation frame.</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="gloo-storage"><code>gloo-storage</code><a href="#gloo-storage" class="hash-link" aria-label="Direct link to gloo-storage" title="Direct link to gloo-storage">​</a></h4>
+<p><code>gloo-storage</code> provides wrappers for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="noopener noreferrer">Web Storage API</a>.
+It can be used to access both local storage and session storage.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="other-changes">Other changes<a href="#other-changes" class="hash-link" aria-label="Direct link to Other changes" title="Direct link to Other changes">​</a></h3>
+<ul>
+<li>We now use GitHub Actions instead of Azure for CI</li>
+<li>READMEs and crate level docs are no longer synced</li>
+<li>This website exists!!</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="looking-for-contributors">Looking for contributors<a href="#looking-for-contributors" class="hash-link" aria-label="Direct link to Looking for contributors" title="Direct link to Looking for contributors">​</a></h2>
+<p>Gloo project is in need of contributors. I recently became maintainer of this project, and I'm trying to revive it.
+It would be really appreciated if you could contribute or raise awareness about the Gloo project.</p>]]></content>
+        <author>
+            <name>Muhammad Hamza</name>
+            <uri>https://github.com/hamza1311</uri>
+        </author>
+        <category label="release" term="release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello World]]></title>
+        <id>https://www.iana.io/blog/hello-world</id>
+        <link href="https://www.iana.io/blog/hello-world"/>
+        <updated>2019-05-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the first blog post of gloo. Gloo is a toolkit for building web applications and libraries with Rust and Wasm,]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to the first blog post of gloo. Gloo is a toolkit for building web applications and libraries with Rust and Wasm,
+composed of modular crates.</p>
+<p>If you are interested in creating content for the blog or contributing to Gloo, please reach out to us.
+We will be happy to have you work with us.</p>]]></content>
+        <author>
+            <name>Jaroslaw Cichon</name>
+            <uri>https://github.com/hamza1311</uri>
+        </author>
+        <category label="hello" term="hello"/>
+    </entry>
+</feed>

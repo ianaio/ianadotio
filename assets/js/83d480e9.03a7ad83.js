@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkianadotio=self.webpackChunkianadotio||[]).push([[205],{3672:a=>{a.exports=JSON.parse('{"label":"release","permalink":"/blog/tags/release","allTagsPath":"/blog/tags","count":4,"unlisted":false}')}}]);
