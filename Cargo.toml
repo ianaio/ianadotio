@@ -1,15 +1,16 @@
 [package]
-authors = ["Rust and WebAssembly Working Group"]
-description = "A modular toolkit for Rust and WebAssembly"
-edition = "2018"
-license = "MIT/Apache-2.0"
-name = "gloo"
+name = "ianadotio"
+version = "0.1.0"
+authors = ["Jaroslaw Cichon <dev@iana.io>"]
+edition = "2021"
+homepage = "https://github.com/ianaio/ianadotio#readme"
+keywords = ["ianaio","systems", "systemd", "rust", "debian"]
+categories = ["command-line-utilities", "rust-systemd", "production-tools::cargo-plugins"]
+repository = "https://github.com/ianaio/ianadotio"
 readme = "README.md"
-version = "0.8.1"
-repository = "https://github.com/rustwasm/gloo"
-homepage = "https://gloo-rs.web.app/"
-documentation = "https://docs.rs/gloo/"
-categories = ["api-bindings", "wasm"]
+description = "Rust Wasm TS"
+license-file = "LICENSE.txt"
+documentation = "https://docs.iana.io/website"
 
 [dependencies]
 gloo-timers = { version = "0.2", path = "crates/timers", optional = true }
