@@ -3,7 +3,7 @@
 //! # Example
 //!
 //! ```rust
-//! use gloo_net::websocket::{Message, futures::WebSocket};
+//! use ianaio_net::websocket::{Message, futures::WebSocket};
 //! use wasm_bindgen_futures::spawn_local;
 //! use futures::{SinkExt, StreamExt};
 //!
@@ -32,7 +32,7 @@ use crate::websocket::{events::CloseEvent, Message, State, WebSocketError};
 use futures_channel::mpsc;
 use futures_core::{ready, Stream};
 use futures_sink::Sink;
-use gloo_utils::errors::JsError;
+use ianaio_utils::errors::JsError;
 use pin_project::{pin_project, pinned_drop};
 use std::cell::RefCell;
 use std::pin::Pin;
@@ -57,6 +57,11 @@ pub struct WebSocket {
         Closure<dyn FnMut(web_sys::Event)>,
         Closure<dyn FnMut(web_sys::CloseEvent)>,
     ),
+    /// Leftover bytes when using `AsyncRead`.
+    ///
+    /// These bytes are drained and returned in subsequent calls to `poll_read`.
+    #[cfg(feature = "io-util")]
+    pub(super) read_pending_bytes: Option<Vec<u8>>, // Same size as `Vec<u8>` alone thanks to niche optimization
 }
 
 impl WebSocket {
@@ -106,7 +111,7 @@ impl WebSocket {
         url: &str,
         protocols: &[S],
     ) -> Result<Self, JsError> {
-        let json = <JsValue as gloo_utils::format::JsValueSerdeExt>::from_serde(protocols)
+        let json = <JsValue as ianaio_utils::format::JsValueSerdeExt>::from_serde(protocols)
             .map_err(|err| {
                 js_sys::Error::new(&format!(
                     "Failed to convert protocols to Javascript value: {err}"
@@ -196,6 +201,8 @@ impl WebSocket {
                 error_callback,
                 close_callback,
             ),
+            #[cfg(feature = "io-util")]
+            read_pending_bytes: None,
         })
     }
 
@@ -235,6 +242,14 @@ impl WebSocket {
     /// The sub-protocol in use.
     pub fn protocol(&self) -> String {
         self.ws.protocol()
+    }
+}
+
+impl TryFrom<web_sys::WebSocket> for WebSocket {
+    type Error = JsError;
+
+    fn try_from(ws: web_sys::WebSocket) -> Result<Self, Self::Error> {
+        Self::setup(Ok(ws))
     }
 }
 
@@ -339,43 +354,38 @@ impl PinnedDrop for WebSocket {
 mod tests {
     use super::*;
     use futures::{SinkExt, StreamExt};
-    use wasm_bindgen_futures::spawn_local;
     use wasm_bindgen_test::*;
 
     wasm_bindgen_test_configure!(run_in_browser);
 
     #[wasm_bindgen_test]
-    fn websocket_works() {
+    async fn websocket_works() {
         let ws_echo_server_url =
             option_env!("WS_ECHO_SERVER_URL").expect("Did you set WS_ECHO_SERVER_URL?");
 
         let ws = WebSocket::open(ws_echo_server_url).unwrap();
         let (mut sender, mut receiver) = ws.split();
 
-        spawn_local(async move {
-            sender
-                .send(Message::Text(String::from("test 1")))
-                .await
-                .unwrap();
-            sender
-                .send(Message::Text(String::from("test 2")))
-                .await
-                .unwrap();
-        });
+        sender
+            .send(Message::Text(String::from("test 1")))
+            .await
+            .unwrap();
+        sender
+            .send(Message::Text(String::from("test 2")))
+            .await
+            .unwrap();
 
-        spawn_local(async move {
-            // ignore first message
-            // the echo-server uses it to send it's info in the first message
-            let _ = receiver.next().await;
+        // ignore first message
+        // the echo-server uses it to send it's info in the first message
+        let _ = receiver.next().await;
 
-            assert_eq!(
-                receiver.next().await.unwrap().unwrap(),
-                Message::Text("test 1".to_string())
-            );
-            assert_eq!(
-                receiver.next().await.unwrap().unwrap(),
-                Message::Text("test 2".to_string())
-            );
-        });
+        assert_eq!(
+            receiver.next().await.unwrap().unwrap(),
+            Message::Text("test 1".to_string())
+        );
+        assert_eq!(
+            receiver.next().await.unwrap().unwrap(),
+            Message::Text("test 2".to_string())
+        );
     }
 }

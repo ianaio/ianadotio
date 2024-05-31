@@ -1,4 +1,4 @@
-use gloo_utils::iter::UncheckedIter;
+use ianaio_utils::iter::UncheckedIter;
 use js_sys::{Array, Map};
 use std::fmt;
 use wasm_bindgen::{JsCast, UnwrapThrowExt};
@@ -80,7 +80,7 @@ impl QueryParams {
 ///
 /// ```
 /// # fn no_run() {
-/// use gloo_net::http::QueryParams;
+/// use ianaio_net::http::QueryParams;
 ///
 /// let params = QueryParams::new();
 /// params.append("a", "1");

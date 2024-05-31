@@ -1,7 +1,7 @@
 use wasm_bindgen_test::{wasm_bindgen_test as test, wasm_bindgen_test_configure};
 
-use gloo_history::{HashHistory, History};
-use gloo_utils::window;
+use ianaio_history::{HashHistory, History};
+use ianaio_utils::window;
 
 wasm_bindgen_test_configure!(run_in_browser);
 

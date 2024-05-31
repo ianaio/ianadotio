@@ -11,7 +11,7 @@ use wasm_bindgen::{JsValue, UnwrapThrowExt};
 /// # Example
 ///
 /// ```rust
-/// use gloo_utils::iter::UncheckedIter;
+/// use ianaio_utils::iter::UncheckedIter;
 /// use wasm_bindgen::{JsCast, JsValue, UnwrapThrowExt};
 ///
 /// # fn no_run() {

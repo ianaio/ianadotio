@@ -1,4 +1,4 @@
-use gloo_timers::future::sleep;
+use ianaio_timers::future::sleep;
 use std::fmt::Debug;
 use std::time::Duration;
 

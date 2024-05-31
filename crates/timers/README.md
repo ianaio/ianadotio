@@ -1,22 +1,22 @@
 <div align="center">
 
-  <h1><code>gloo-timers</code></h1>
+  <h1><code>ianaio-timers</code></h1>
 
   <p>
-    <a href="https://crates.io/crates/gloo-timers"><img src="https://img.shields.io/crates/v/gloo-timers.svg?style=flat-square" alt="Crates.io version" /></a>
-    <a href="https://crates.io/crates/gloo-timers"><img src="https://img.shields.io/crates/d/gloo-timers.svg?style=flat-square" alt="Download" /></a>
-    <a href="https://docs.rs/gloo-timers"><img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs docs" /></a>
+    <a href="https://crates.io/crates/ianaio-timers"><img src="https://img.shields.io/crates/v/ianaio-timers.svg?style=flat-square" alt="Crates.io version" /></a>
+    <a href="https://crates.io/crates/ianaio-timers"><img src="https://img.shields.io/crates/d/ianaio-timers.svg?style=flat-square" alt="Download" /></a>
+    <a href="https://docs.rs/ianaio-timers"><img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs docs" /></a>
   </p>
 
   <h3>
-    <a href="https://docs.rs/gloo-timers">API Docs</a>
+    <a href="https://docs.iana.io/api/ianaio-timers">API Docs</a>
     <span> | </span>
-    <a href="https://github.com/rustwasm/gloo/blob/master/CONTRIBUTING.md">Contributing</a>
+    <a href="https://github.com/ianaio/documents-legal/blob/main/CONTRIBUTING.md">Contributing</a>
     <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
+    <a href="https://discordapp.com/channels/#/#">Chat</a>
   </h3>
 
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
+  <sub>Built with 🦀🕸 by <a href="https://dev.iana.io/">The IanaIO Rust and WebAssembly Working Group</a></sub>
 </div>
 
 
@@ -34,7 +34,7 @@ Timeouts fire once after a period of time (measured in milliseconds).
 #### Timeouts with a Callback Function
 
 ```rust
-use gloo_timers::callback::Timeout;
+use ianaio_timers::callback::Timeout;
 
 let timeout = Timeout::new(1_000, move || {
     // Do something after the one second timeout is up!

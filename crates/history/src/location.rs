@@ -2,10 +2,7 @@ use std::any::Any;
 use std::rc::Rc;
 
 #[cfg(feature = "query")]
-use serde::de::DeserializeOwned;
-
-#[cfg(feature = "query")]
-use crate::error::HistoryResult;
+use crate::{error::HistoryResult, query::FromQuery};
 
 /// A history location.
 ///
@@ -23,7 +20,7 @@ pub struct Location {
 impl Location {
     /// Returns a unique id of current location.
     ///
-    /// Returns [`None`] if current location is not created by `gloo::history`.
+    /// Returns [`None`] if current location is not created by `ianaio::history`.
     ///
     /// # Warning
     ///
@@ -44,12 +41,12 @@ impl Location {
 
     /// Returns the queries of current URL parsed as `T`.
     #[cfg(feature = "query")]
-    pub fn query<T>(&self) -> HistoryResult<T>
+    pub fn query<T>(&self) -> HistoryResult<T::Target, T::Error>
     where
-        T: DeserializeOwned,
+        T: FromQuery,
     {
-        let query = self.query_str();
-        serde_urlencoded::from_str(query.strip_prefix('?').unwrap_or("")).map_err(|e| e.into())
+        let query = self.query_str().strip_prefix('?').unwrap_or("");
+        T::from_query(query)
     }
 
     /// Returns the hash fragment of current URL.
@@ -59,7 +56,7 @@ impl Location {
 
     /// Returns an Rc'ed state of current location.
     ///
-    /// Returns [`None`] if state is not created by `gloo::history`, or state fails to downcast.
+    /// Returns [`None`] if state is not created by `ianaio::history`, or state fails to downcast.
     pub fn state<T>(&self) -> Option<Rc<T>>
     where
         T: 'static,

@@ -16,7 +16,7 @@
 //! Wrap code to be measured in a closure with [`Timer::scope`].
 //!
 //! ```no_run
-//! use gloo_console::Timer;
+//! use ianaio_console::Timer;
 //!
 //! let value = Timer::scope("foo", || {
 //!     // Place code to be measured here
@@ -31,8 +31,8 @@
 //! The measurement ends when the timer object goes out of scope / is dropped.
 //!
 //! ```no_run
-//! use gloo_console::Timer;
-//! use gloo_timers::callback::Timeout;
+//! use ianaio_console::Timer;
+//! use ianaio_timers::callback::Timeout;
 //!
 //! // Start timing a new operation.
 //! let timer = Timer::new("foo");
@@ -61,7 +61,7 @@ impl<'a> Timer<'a> {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_console::Timer;
+    /// use ianaio_console::Timer;
     ///
     /// let _timer = Timer::new("foo");
     /// ```
@@ -75,7 +75,7 @@ impl<'a> Timer<'a> {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_console::Timer;
+    /// use ianaio_console::Timer;
     ///
     /// let value = Timer::scope("foo", || {
     ///     // Code to measure here

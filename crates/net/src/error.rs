@@ -1,4 +1,4 @@
-use gloo_utils::errors::JsError;
+use ianaio_utils::errors::JsError;
 use thiserror::Error as ThisError;
 
 /// All the errors returned by this crate.
@@ -25,7 +25,7 @@ pub enum Error {
 pub(crate) use conversion::*;
 #[cfg(any(feature = "http", feature = "websocket", feature = "eventsource"))]
 mod conversion {
-    use gloo_utils::errors::JsError;
+    use ianaio_utils::errors::JsError;
     use std::convert::TryFrom;
     use wasm_bindgen::JsValue;
 

@@ -28,3 +28,4 @@ pub fn oneshot(attr: TokenStream, item: TokenStream) -> TokenStream {
         .unwrap_or_else(|err| err.to_compile_error())
         .into()
 }
+

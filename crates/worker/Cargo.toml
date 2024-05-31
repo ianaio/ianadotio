@@ -1,14 +1,15 @@
 [package]
-name = "gloo-worker"
-version = "0.2.1"
-authors = ["Rust and WebAssembly Working Group"]
+name = "ianaio-worker"
+version = "0.1.0"
+authors = ["Jaroslaw Cichon <dev@iana.io>"]
 edition = "2021"
 readme = "README.md"
 description = "Convenience crate for working with Web Workers"
-repository = "https://github.com/rustwasm/gloo/tree/master/crates/worker"
-homepage = "https://github.com/rustwasm/gloo"
-license = "MIT OR Apache-2.0"
+repository = "https://github.com/ianaio/worker"
+homepage = "https:///rustwasm.iana.io/worker"
+license-file = "LICENSE.txt"
 categories = ["api-bindings", "asynchronous", "wasm"]
+rust-version = "1.80"
 
 [package.metadata.docs.rs]
 all-features = true
@@ -18,7 +19,7 @@ rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
 bincode = "1"
-gloo-utils = { path = "../utils", version = "0.1" }
+gloo-utils = { path = "../utils", version = "0.2" }
 gloo-worker-macros = { path = "../worker-macros", version = "0.1" }
 js-sys = "0.3"
 pinned = "0.1.0"
@@ -43,3 +44,4 @@ features = [
 [features]
 default = []
 futures = []
+

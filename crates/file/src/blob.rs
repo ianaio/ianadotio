@@ -188,9 +188,9 @@ impl File {
     ///
     /// ```rust,no_run
     /// use chrono::prelude::*;
-    /// use gloo_file::File;
+    /// use ianaio_file::File;
     ///
-    /// // Just create a dummy `gloo::file::File` for demonstration purposes.
+    /// // Just create a dummy `ianaio::file::File` for demonstration purposes.
     /// let example_file = File::new_with_options(
     ///     "motivation.txt",
     ///     "live your best life",
@@ -245,9 +245,9 @@ impl File {
     ///
     /// ```rust,no_run
     /// use chrono::prelude::*;
-    /// use gloo_file::File;
+    /// use ianaio_file::File;
     ///
-    /// // Just create a dummy `gloo::file::File` for demonstration purposes.
+    /// // Just create a dummy `ianaio::file::File` for demonstration purposes.
     /// let example_file = File::new("test_file.txt", "<almost empty contents>");
     /// let date: DateTime<Utc> = example_file.last_modified_time().into();
     /// ```

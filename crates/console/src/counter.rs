@@ -11,7 +11,7 @@
 //! The counter is started with
 //!
 //! ```no_run
-//! use gloo_console::Counter;
+//! use ianaio_console::Counter;
 //!
 //! let counter = Counter::new("foo");
 //!
@@ -36,7 +36,7 @@ impl<'a> Counter<'a> {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_console::Counter;
+    /// use ianaio_console::Counter;
     ///
     /// let _timer = Counter::new("foo");
     /// ```

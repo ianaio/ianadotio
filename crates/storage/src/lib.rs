@@ -19,7 +19,7 @@ mod session_storage;
 pub use local_storage::LocalStorage;
 pub use session_storage::SessionStorage;
 
-/// `gloo-storage`'s `Result`
+/// `ianaio-storage`'s `Result`
 pub type Result<T> = std::result::Result<T, StorageError>;
 
 /// Trait which provides implementations for managing storage in the browser.

@@ -1,16 +1,13 @@
 use std::borrow::Cow;
 
-#[cfg(feature = "query")]
-use serde::Serialize;
-
 use crate::browser::BrowserHistory;
-#[cfg(feature = "query")]
-use crate::error::HistoryResult;
 use crate::hash::HashHistory;
 use crate::history::History;
 use crate::listener::HistoryListener;
 use crate::location::Location;
 use crate::memory::MemoryHistory;
+#[cfg(feature = "query")]
+use crate::{error::HistoryResult, query::ToQuery};
 
 /// A [`History`] that provides a universal API to the underlying history type.
 #[derive(Clone, PartialEq, Debug)]
@@ -27,6 +24,7 @@ impl History for AnyHistory {
     fn len(&self) -> usize {
         match self {
             Self::Browser(m) => m.len(),
+
             Self::Hash(m) => m.len(),
             Self::Memory(m) => m.len(),
         }
@@ -35,6 +33,7 @@ impl History for AnyHistory {
     fn go(&self, delta: isize) {
         match self {
             Self::Browser(m) => m.go(delta),
+
             Self::Hash(m) => m.go(delta),
             Self::Memory(m) => m.go(delta),
         }
@@ -43,6 +42,7 @@ impl History for AnyHistory {
     fn push<'a>(&self, route: impl Into<Cow<'a, str>>) {
         match self {
             Self::Browser(m) => m.push(route),
+
             Self::Hash(m) => m.push(route),
             Self::Memory(m) => m.push(route),
         }
@@ -51,6 +51,7 @@ impl History for AnyHistory {
     fn replace<'a>(&self, route: impl Into<Cow<'a, str>>) {
         match self {
             Self::Browser(m) => m.replace(route),
+
             Self::Hash(m) => m.replace(route),
             Self::Memory(m) => m.replace(route),
         }
@@ -62,6 +63,7 @@ impl History for AnyHistory {
     {
         match self {
             Self::Browser(m) => m.push_with_state(route, state),
+
             Self::Hash(m) => m.push_with_state(route, state),
             Self::Memory(m) => m.push_with_state(route, state),
         }
@@ -73,18 +75,24 @@ impl History for AnyHistory {
     {
         match self {
             Self::Browser(m) => m.replace_with_state(route, state),
+
             Self::Hash(m) => m.replace_with_state(route, state),
             Self::Memory(m) => m.replace_with_state(route, state),
         }
     }
 
     #[cfg(feature = "query")]
-    fn push_with_query<'a, Q>(&self, route: impl Into<Cow<'a, str>>, query: Q) -> HistoryResult<()>
+    fn push_with_query<'a, Q>(
+        &self,
+        route: impl Into<Cow<'a, str>>,
+        query: Q,
+    ) -> HistoryResult<(), Q::Error>
     where
-        Q: Serialize,
+        Q: ToQuery,
     {
         match self {
             Self::Browser(m) => m.push_with_query(route, query),
+
             Self::Hash(m) => m.push_with_query(route, query),
             Self::Memory(m) => m.push_with_query(route, query),
         }
@@ -94,48 +102,51 @@ impl History for AnyHistory {
         &self,
         route: impl Into<Cow<'a, str>>,
         query: Q,
-    ) -> HistoryResult<()>
+    ) -> HistoryResult<(), Q::Error>
     where
-        Q: Serialize,
+        Q: ToQuery,
     {
         match self {
             Self::Browser(m) => m.replace_with_query(route, query),
+
             Self::Hash(m) => m.replace_with_query(route, query),
             Self::Memory(m) => m.replace_with_query(route, query),
         }
     }
 
-    #[cfg(all(feature = "query"))]
+    #[cfg(feature = "query")]
     fn push_with_query_and_state<'a, Q, T>(
         &self,
         route: impl Into<Cow<'a, str>>,
         query: Q,
         state: T,
-    ) -> HistoryResult<()>
+    ) -> HistoryResult<(), Q::Error>
     where
-        Q: Serialize,
+        Q: ToQuery,
         T: 'static,
     {
         match self {
             Self::Browser(m) => m.push_with_query_and_state(route, query, state),
+
             Self::Hash(m) => m.push_with_query_and_state(route, query, state),
             Self::Memory(m) => m.push_with_query_and_state(route, query, state),
         }
     }
 
-    #[cfg(all(feature = "query"))]
+    #[cfg(feature = "query")]
     fn replace_with_query_and_state<'a, Q, T>(
         &self,
         route: impl Into<Cow<'a, str>>,
         query: Q,
         state: T,
-    ) -> HistoryResult<()>
+    ) -> HistoryResult<(), Q::Error>
     where
-        Q: Serialize,
+        Q: ToQuery,
         T: 'static,
     {
         match self {
             Self::Browser(m) => m.replace_with_query_and_state(route, query, state),
+
             Self::Hash(m) => m.replace_with_query_and_state(route, query, state),
             Self::Memory(m) => m.replace_with_query_and_state(route, query, state),
         }
@@ -147,6 +158,7 @@ impl History for AnyHistory {
     {
         match self {
             Self::Browser(m) => m.listen(callback),
+
             Self::Hash(m) => m.listen(callback),
             Self::Memory(m) => m.listen(callback),
         }
@@ -155,6 +167,7 @@ impl History for AnyHistory {
     fn location(&self) -> Location {
         match self {
             Self::Browser(m) => m.location(),
+
             Self::Hash(m) => m.location(),
             Self::Memory(m) => m.location(),
         }

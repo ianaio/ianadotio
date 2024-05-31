@@ -14,7 +14,7 @@ Timeouts fire once after a period of time (measured in milliseconds).
 ### Timeouts with a Callback Function
 
 ```no_run
-use gloo_timers::callback::Timeout;
+use ianaio_timers::callback::Timeout;
 
 let timeout = Timeout::new(1_000, move || {
     // Do something after the one second timeout is up!
@@ -33,7 +33,7 @@ timers is exposed.
 #![cfg_attr(feature = "futures", doc = "```no_run")]
 #![cfg_attr(not(feature = "futures"), doc = "```ignore")]
 /*!
-use gloo_timers::future::TimeoutFuture;
+use ianaio_timers::future::TimeoutFuture;
 use wasm_bindgen_futures::spawn_local;
 
 // Spawn the `timeout` future on the local thread. If we just dropped it, then
@@ -64,3 +64,4 @@ pub mod callback;
 
 #[cfg(feature = "futures")]
 pub mod future;
+

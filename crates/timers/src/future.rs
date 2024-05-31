@@ -24,7 +24,7 @@ use wasm_bindgen::prelude::*;
 /// # Example
 ///
 /// ```no_run
-/// use gloo_timers::future::TimeoutFuture;
+/// use ianaio_timers::future::TimeoutFuture;
 /// use futures_util::future::{select, Either};
 /// use wasm_bindgen_futures::spawn_local;
 ///
@@ -57,7 +57,7 @@ impl TimeoutFuture {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_timers::future::TimeoutFuture;
+    /// use ianaio_timers::future::TimeoutFuture;
     /// use wasm_bindgen_futures::spawn_local;
     ///
     /// spawn_local(async {
@@ -86,7 +86,7 @@ impl TimeoutFuture {
 ///
 /// ```compile_fail
 /// use std::time::Duration;
-/// use gloo_timers::future::sleep;
+/// use ianaio_timers::future::sleep;
 ///
 /// sleep(Duration::from_secs(1)).await;
 /// ```
@@ -130,7 +130,7 @@ impl IntervalStream {
     ///
     /// ```compile_fail
     /// use futures_util::stream::StreamExt;
-    /// use gloo_timers::future::IntervalStream;
+    /// use ianaio_timers::future::IntervalStream;
     /// use wasm_bindgen_futures::spawn_local;
     ///
     /// spawn_local(async {
@@ -160,3 +160,4 @@ impl Stream for IntervalStream {
         Stream::poll_next(Pin::new(&mut self.receiver), cx)
     }
 }
+

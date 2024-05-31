@@ -6,7 +6,7 @@ use wasm_bindgen::JsCast;
 use wasm_bindgen_futures::JsFuture;
 use wasm_bindgen_test::*;
 
-use gloo_file::{callbacks::read_as_text, Blob, File, ObjectUrl};
+use ianaio_file::{callbacks::read_as_text, Blob, File, ObjectUrl};
 use web_sys::{window, Response};
 
 wasm_bindgen_test_configure!(run_in_browser);
@@ -70,7 +70,7 @@ async fn text_future() {
     let blob = Blob::new("hello");
 
     assert_eq!(
-        gloo_file::futures::read_as_text(&blob).await.unwrap(),
+        ianaio_file::futures::read_as_text(&blob).await.unwrap(),
         "hello"
     );
 }
@@ -80,7 +80,7 @@ async fn text_future() {
 async fn data_url_future() {
     let blob = Blob::new_with_options(PNG_FILE, Some("image/png"));
     assert_eq!(
-        gloo_file::futures::read_as_data_url(&blob).await.unwrap(),
+        ianaio_file::futures::read_as_data_url(&blob).await.unwrap(),
         PNG_FILE_DATA
     );
 }
@@ -90,7 +90,7 @@ async fn data_url_future() {
 async fn bytes_future() {
     let blob = Blob::new_with_options(PNG_FILE, Some("image/png"));
     assert_eq!(
-        gloo_file::futures::read_as_bytes(&blob).await.unwrap(),
+        ianaio_file::futures::read_as_bytes(&blob).await.unwrap(),
         PNG_FILE
     );
 }
@@ -119,7 +119,7 @@ async fn blob_to_url() {
     let body: JsFuture = response.blob().unwrap().into();
     let body = body.await.unwrap().unchecked_into::<web_sys::Blob>();
 
-    let body = gloo_file::futures::read_as_text(&body.into())
+    let body = ianaio_file::futures::read_as_text(&body.into())
         .await
         .unwrap();
     assert_eq!(&body, "hello world");

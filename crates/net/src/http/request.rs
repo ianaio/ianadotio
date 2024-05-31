@@ -82,7 +82,7 @@ impl RequestBuilder {
     /// ```
     /// # fn no_run() {
     /// use std::collections::HashMap;
-    /// use gloo_net::http::Request;
+    /// use ianaio_net::http::Request;
     ///
     /// let slice_params = [("key", "value")];
     /// let vec_params = vec![("a", "3"), ("b", "4")];

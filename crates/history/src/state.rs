@@ -9,7 +9,7 @@ use crate::utils::get_id;
 /// A constant to prevent state collision.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 enum HistoryStateKind {
-    #[serde(rename = "gloo_history_state")]
+    #[serde(rename = "ianaio_history_state")]
     Gloo,
 }
 

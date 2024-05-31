@@ -6,8 +6,11 @@
 pub mod events;
 pub mod futures;
 
+#[cfg(feature = "io-util")]
+mod io_util;
+
 use events::CloseEvent;
-use gloo_utils::errors::JsError;
+use ianaio_utils::errors::JsError;
 use std::fmt;
 
 /// Message sent to and received from WebSocket.

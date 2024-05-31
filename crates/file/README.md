@@ -1,17 +1,17 @@
 <div align="center">
 
-  <h1><code>gloo-file</code></h1>
+  <h1><code>ianaio-file</code></h1>
 
   <p>
-    <a href="https://crates.io/crates/gloo-file"><img src="https://img.shields.io/crates/v/gloo-file.svg?style=flat-square" alt="Crates.io version" /></a>
-    <a href="https://crates.io/crates/gloo-file"><img src="https://img.shields.io/crates/d/gloo-file.svg?style=flat-square" alt="Download" /></a>
-    <a href="https://docs.rs/gloo-file"><img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs docs" /></a>
+    <a href="https://crates.io/crates/ianaio-file"><img src="https://img.shields.io/crates/v/ianaio-file.svg?style=flat-square" alt="Crates.io version" /></a>
+    <a href="https://crates.io/crates/ianaio-file"><img src="https://img.shields.io/crates/d/ianaio-file.svg?style=flat-square" alt="Download" /></a>
+    <a href="https://docs.rs/ianaio-file"><img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs docs" /></a>
   </p>
 
   <h3>
-    <a href="https://docs.rs/gloo-file">API Docs</a>
+    <a href="https://docs.rs/ianaio-file">API Docs</a>
     <span> | </span>
-    <a href="https://github.com/rustwasm/gloo/blob/master/CONTRIBUTING.md">Contributing</a>
+    <a href="https://github.com/rustwasm/ianaio/blob/master/CONTRIBUTING.md">Contributing</a>
     <span> | </span>
     <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
   </h3>

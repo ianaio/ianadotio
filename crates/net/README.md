@@ -1,17 +1,17 @@
 <div align="center">
 
-  <h1><code>gloo-net</code></h1>
+  <h1><code>ianaio-net</code></h1>
 
   <p>
-    <a href="https://crates.io/crates/gloo-net"><img src="https://img.shields.io/crates/v/gloo-net.svg?style=flat-square" alt="Crates.io version" /></a>
-    <a href="https://crates.io/crates/gloo-net"><img src="https://img.shields.io/crates/d/gloo-net.svg?style=flat-square" alt="Download" /></a>
-    <a href="https://docs.rs/gloo-net"><img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs docs" /></a>
+    <a href="https://crates.io/crates/ianaio-net"><img src="https://img.shields.io/crates/v/ianaio-net.svg?style=flat-square" alt="Crates.io version" /></a>
+    <a href="https://crates.io/crates/ianaio-net"><img src="https://img.shields.io/crates/d/ianaio-net.svg?style=flat-square" alt="Download" /></a>
+    <a href="https://docs.rs/ianaio-net"><img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs docs" /></a>
   </p>
 
   <h3>
-    <a href="https://docs.rs/gloo-net">API Docs</a>
+    <a href="https://docs.rs/ianaio-net">API Docs</a>
     <span> | </span>
-    <a href="https://github.com/rustwasm/gloo/blob/master/CONTRIBUTING.md">Contributing</a>
+    <a href="https://github.com/rustwasm/ianaio/blob/master/CONTRIBUTING.md">Contributing</a>
     <span> | </span>
     <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
   </h3>
@@ -36,7 +36,7 @@ assert_eq!(resp.status(), 200);
 ### WebSocket
 
 ```rust
-use gloo_net::websocket::{Message, futures::WebSocket};
+use ianaio_net::websocket::{Message, futures::WebSocket};
 use wasm_bindgen_futures::spawn_local;
 use futures::{SinkExt, StreamExt};
 
@@ -59,7 +59,7 @@ spawn_local(async move {
 ### EventSource
 
 ```rust
-use gloo_net::eventsource::futures::EventSource;
+use ianaio_net::eventsource::futures::EventSource;
 use wasm_bindgen_futures::spawn_local;
 use futures::{stream, StreamExt};
 

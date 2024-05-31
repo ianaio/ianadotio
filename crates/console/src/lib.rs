@@ -9,7 +9,7 @@
 //!
 //! ```no_run, rust
 //! # use wasm_bindgen::JsValue;
-//! use gloo_console::log;
+//! use ianaio_console::log;
 //!
 //! let object = JsValue::from("any JsValue can be logged");
 //! log!("text", object)
@@ -30,7 +30,7 @@ pub use timer::Timer;
 
 #[doc(hidden)]
 pub mod __macro {
-    use gloo_utils::format::JsValueSerdeExt;
+    use ianaio_utils::format::JsValueSerdeExt;
     pub use js_sys::Array;
     pub use wasm_bindgen::JsValue;
     use wasm_bindgen::UnwrapThrowExt;

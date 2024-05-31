@@ -6,7 +6,7 @@ extern crate wasm_bindgen_test;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_test::*;
 
-use gloo_utils::format::JsValueSerdeExt;
+use ianaio_utils::format::JsValueSerdeExt;
 
 use serde_derive::{Deserialize, Serialize};
 

@@ -23,13 +23,14 @@ use web_sys::{AddEventListenerOptions, Event, EventTarget};
 /// # Default
 ///
 /// ```rust
-/// # use gloo_events::EventListenerPhase;
+/// # use ianaio_events::EventListenerPhase;
 /// #
 /// EventListenerPhase::Bubble
 /// # ;
 /// ```
-#[derive(Debug, Clone, Copy)]
+#[derive(Default, Debug, Clone, Copy, PartialEq, Eq)]
 pub enum EventListenerPhase {
+    #[default]
     #[allow(missing_docs)]
     Bubble,
 
@@ -47,20 +48,13 @@ impl EventListenerPhase {
     }
 }
 
-impl Default for EventListenerPhase {
-    #[inline]
-    fn default() -> Self {
-        EventListenerPhase::Bubble
-    }
-}
-
 /// Specifies options for [`EventListener::new_with_options`](struct.EventListener.html#method.new_with_options) and
 /// [`EventListener::once_with_options`](struct.EventListener.html#method.once_with_options).
 ///
 /// # Default
 ///
 /// ```rust
-/// # use gloo_events::{EventListenerOptions, EventListenerPhase};
+/// # use ianaio_events::{EventListenerOptions, EventListenerPhase};
 /// #
 /// EventListenerOptions {
 ///     phase: EventListenerPhase::Bubble,
@@ -74,7 +68,7 @@ impl Default for EventListenerPhase {
 /// Sets `phase` to `EventListenerPhase::Capture`, using the default for the rest:
 ///
 /// ```rust
-/// # use gloo_events::EventListenerOptions;
+/// # use ianaio_events::EventListenerOptions;
 /// #
 /// let options = EventListenerOptions::run_in_capture_phase();
 /// ```
@@ -82,7 +76,7 @@ impl Default for EventListenerPhase {
 /// Sets `passive` to `false`, using the default for the rest:
 ///
 /// ```rust
-/// # use gloo_events::EventListenerOptions;
+/// # use ianaio_events::EventListenerOptions;
 /// #
 /// let options = EventListenerOptions::enable_prevent_default();
 /// ```
@@ -90,14 +84,14 @@ impl Default for EventListenerPhase {
 /// Specifies all options:
 ///
 /// ```rust
-/// # use gloo_events::{EventListenerOptions, EventListenerPhase};
+/// # use ianaio_events::{EventListenerOptions, EventListenerPhase};
 /// #
 /// let options = EventListenerOptions {
 ///     phase: EventListenerPhase::Capture,
 ///     passive: false,
 /// };
 /// ```
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct EventListenerOptions {
     /// The phase that the event listener should be run in.
     pub phase: EventListenerPhase,
@@ -119,7 +113,7 @@ impl EventListenerOptions {
     /// This is the same as:
     ///
     /// ```rust
-    /// # use gloo_events::{EventListenerOptions, EventListenerPhase};
+    /// # use ianaio_events::{EventListenerOptions, EventListenerPhase};
     /// #
     /// EventListenerOptions {
     ///     phase: EventListenerPhase::Capture,
@@ -140,7 +134,7 @@ impl EventListenerOptions {
     /// This is the same as:
     ///
     /// ```rust
-    /// # use gloo_events::EventListenerOptions;
+    /// # use ianaio_events::EventListenerOptions;
     /// #
     /// EventListenerOptions {
     ///     passive: false,
@@ -193,7 +187,7 @@ thread_local! {
 /// Normally the `EventListener` is stored inside of another struct, like this:
 ///
 /// ```rust
-/// # use gloo_events::EventListener;
+/// # use ianaio_events::EventListener;
 /// # use wasm_bindgen::UnwrapThrowExt;
 /// use std::pin::Pin;
 /// use std::task::{Context, Poll};
@@ -286,7 +280,7 @@ impl EventListener {
     /// If you need to use `prevent_default`, you must use [`EventListener::new_with_options`](#method.new_with_options), like this:
     ///
     /// ```rust,no_run
-    /// # use gloo_events::{EventListener, EventListenerOptions};
+    /// # use ianaio_events::{EventListener, EventListenerOptions};
     /// # let target = unimplemented!();
     /// # let event_type = "click";
     /// # fn callback(_: &web_sys::Event) {}
@@ -305,7 +299,7 @@ impl EventListener {
     /// If you want it to run in the capture phase, you must use [`EventListener::new_with_options`](#method.new_with_options), like this:
     ///
     /// ```rust,no_run
-    /// # use gloo_events::{EventListener, EventListenerOptions};
+    /// # use ianaio_events::{EventListener, EventListenerOptions};
     /// # let target = unimplemented!();
     /// # let event_type = "click";
     /// # fn callback(_: &web_sys::Event) {}
@@ -323,7 +317,7 @@ impl EventListener {
     /// (which is [`MouseEvent`](https://rustwasm.github.io/wasm-bindgen/api/web_sys/struct.MouseEvent.html)):
     ///
     /// ```rust,no_run
-    /// # use gloo_events::EventListener;
+    /// # use ianaio_events::EventListener;
     /// # use wasm_bindgen::{JsCast, UnwrapThrowExt};
     /// # let target = unimplemented!();
     /// #
@@ -363,7 +357,7 @@ impl EventListener {
     /// (which is [`ProgressEvent`](https://rustwasm.github.io/wasm-bindgen/api/web_sys/struct.ProgressEvent.html)):
     ///
     /// ```rust,no_run
-    /// # use gloo_events::EventListener;
+    /// # use ianaio_events::EventListener;
     /// # use wasm_bindgen::{JsCast, UnwrapThrowExt};
     /// # let target = unimplemented!();
     /// #
@@ -417,7 +411,7 @@ impl EventListener {
     /// [`event.prevent_default()`](https://rustwasm.github.io/wasm-bindgen/api/web_sys/struct.Event.html#method.prevent_default):
     ///
     /// ```rust,no_run
-    /// # use gloo_events::{EventListener, EventListenerOptions};
+    /// # use ianaio_events::{EventListener, EventListenerOptions};
     /// # let target = unimplemented!();
     /// #
     /// let options = EventListenerOptions::enable_prevent_default();
@@ -435,7 +429,7 @@ impl EventListener {
     /// to stop the event from bubbling:
     ///
     /// ```rust,no_run
-    /// # use gloo_events::{EventListener, EventListenerOptions};
+    /// # use ianaio_events::{EventListener, EventListenerOptions};
     /// # let target = unimplemented!();
     /// #
     /// let options = EventListenerOptions::run_in_capture_phase();
@@ -481,7 +475,7 @@ impl EventListener {
     /// [`event.prevent_default()`](https://rustwasm.github.io/wasm-bindgen/api/web_sys/struct.Event.html#method.prevent_default):
     ///
     /// ```rust,no_run
-    /// # use gloo_events::{EventListener, EventListenerOptions};
+    /// # use ianaio_events::{EventListener, EventListenerOptions};
     /// # let target = unimplemented!();
     /// #
     /// let options = EventListenerOptions::enable_prevent_default();
@@ -499,7 +493,7 @@ impl EventListener {
     /// to stop the event from bubbling:
     ///
     /// ```rust,no_run
-    /// # use gloo_events::{EventListener, EventListenerOptions};
+    /// # use ianaio_events::{EventListener, EventListenerOptions};
     /// # let target = unimplemented!();
     /// #
     /// let options = EventListenerOptions::run_in_capture_phase();

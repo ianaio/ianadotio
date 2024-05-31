@@ -6,3 +6,4 @@ fn macro_tests() {
     t.compile_fail("tests/oneshot/*-fail.rs");
     t.pass("tests/oneshot/*-pass.rs");
 }
+

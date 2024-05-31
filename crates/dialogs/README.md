@@ -1,17 +1,17 @@
 <div align="center">
 
-  <h1><code>gloo-dialogs</code></h1>
+  <h1><code>ianaio-dialogs</code></h1>
 
   <p>
-    <a href="https://crates.io/crates/gloo-dialogs"><img src="https://img.shields.io/crates/v/gloo-dialogs.svg?style=flat-square" alt="Crates.io version" /></a>
-    <a href="https://crates.io/crates/gloo-dialogs"><img src="https://img.shields.io/crates/d/gloo-dialogs.svg?style=flat-square" alt="Download" /></a>
-    <a href="https://docs.rs/gloo-dialogs"><img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs docs" /></a>
+    <a href="https://crates.io/crates/ianaio-dialogs"><img src="https://img.shields.io/crates/v/ianaio-dialogs.svg?style=flat-square" alt="Crates.io version" /></a>
+    <a href="https://crates.io/crates/ianaio-dialogs"><img src="https://img.shields.io/crates/d/ianaio-dialogs.svg?style=flat-square" alt="Download" /></a>
+    <a href="https://docs.rs/ianaio-dialogs"><img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs docs" /></a>
   </p>
 
   <h3>
-    <a href="https://docs.rs/gloo-dialogs">API Docs</a>
+    <a href="https://docs.rs/ianaio-dialogs">API Docs</a>
     <span> | </span>
-    <a href="https://github.com/rustwasm/gloo/blob/master/CONTRIBUTING.md">Contributing</a>
+    <a href="https://github.com/rustwasm/ianaio/blob/master/CONTRIBUTING.md">Contributing</a>
     <span> | </span>
     <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
   </h3>
@@ -27,4 +27,4 @@ This crate provides wrappers for the following functions.
 `web-sys` provides a raw API which is hard to use. This crate provides an easy-to-use,
 idiomatic Rust API for these functions.
 
-See the [API documentation](https://docs.rs/gloo-dialogs) to learn more.
+See the [API documentation](https://docs.rs/ianaio-dialogs) to learn more.

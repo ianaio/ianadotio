@@ -49,7 +49,7 @@ impl Timeout {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_timers::callback::Timeout;
+    /// use ianaio_timers::callback::Timeout;
     ///
     /// let timeout = Timeout::new(1_000, move || {
     ///     // Do something...
@@ -82,7 +82,7 @@ impl Timeout {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_timers::callback::Timeout;
+    /// use ianaio_timers::callback::Timeout;
     ///
     /// // We definitely want to do stuff, and aren't going to ever cancel this
     /// // timeout.
@@ -104,7 +104,7 @@ impl Timeout {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_timers::callback::Timeout;
+    /// use ianaio_timers::callback::Timeout;
     ///
     /// let timeout = Timeout::new(1_000, || {
     ///     // Do stuff...
@@ -150,7 +150,7 @@ impl Interval {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_timers::callback::Interval;
+    /// use ianaio_timers::callback::Interval;
     ///
     /// let interval = Interval::new(1_000, move || {
     ///     // Do something...
@@ -183,7 +183,7 @@ impl Interval {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_timers::callback::Interval;
+    /// use ianaio_timers::callback::Interval;
     ///
     /// // We want to do stuff every second, indefinitely.
     /// Interval::new(1_000, || {
@@ -204,7 +204,7 @@ impl Interval {
     /// # Example
     ///
     /// ```no_run
-    /// use gloo_timers::callback::Interval;
+    /// use ianaio_timers::callback::Interval;
     ///
     /// let interval = Interval::new(1_000, || {
     ///     // Do stuff...
@@ -220,3 +220,4 @@ impl Interval {
         self.closure.take().unwrap_throw()
     }
 }
+

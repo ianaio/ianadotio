@@ -5,7 +5,7 @@ use futures_util::{
     future::{select, Either, FutureExt},
     stream::StreamExt,
 };
-use gloo_timers::{
+use ianaio_timers::{
     callback::{Interval, Timeout},
     future::{sleep, IntervalStream, TimeoutFuture},
 };
@@ -114,3 +114,4 @@ async fn interval_stream() {
     let results: Vec<_> = IntervalStream::new(1).take(5).collect().await;
     assert_eq!(results.len(), 5);
 }
+

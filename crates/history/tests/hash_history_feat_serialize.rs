@@ -2,10 +2,10 @@ use wasm_bindgen_test::wasm_bindgen_test_configure;
 
 wasm_bindgen_test_configure!(run_in_browser);
 
-#[cfg(all(feature = "query"))]
+#[cfg(feature = "query")]
 mod utils;
 
-#[cfg(all(feature = "query"))]
+#[cfg(feature = "query")]
 mod feat_serialize {
     use super::*;
 
@@ -17,9 +17,9 @@ mod feat_serialize {
 
     use serde::{Deserialize, Serialize};
 
-    use gloo_history::{HashHistory, History};
+    use ianaio_history::{HashHistory, History};
 
-    use gloo_utils::window;
+    use ianaio_utils::window;
 
     #[derive(Debug, Serialize, Deserialize, PartialEq)]
     struct Query {

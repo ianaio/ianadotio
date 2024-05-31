@@ -8,7 +8,7 @@ mod private {
 
 /// Extension trait to provide conversion between [`JsValue`](wasm_bindgen::JsValue) and [`serde`].
 ///
-/// Usage of this API requires activating the `serde` feature of the `gloo-utils` crate.
+/// Usage of this API requires activating the `serde` feature of the `ianaio-utils` crate.
 #[cfg_attr(docsrs, doc(cfg(feature = "serde")))]
 pub trait JsValueSerdeExt: private::Sealed {
     /// Creates a new `JsValue` from the JSON serialization of the object `t`
@@ -21,12 +21,12 @@ pub trait JsValueSerdeExt: private::Sealed {
     /// situations!
     ///
     /// Usage of this API requires activating the `serde` feature of
-    /// the `gloo-utils` crate.
+    /// the `ianaio-utils` crate.
     /// # Example
     ///
     /// ```rust
     /// use wasm_bindgen::JsValue;
-    /// use gloo_utils::format::JsValueSerdeExt;
+    /// use ianaio_utils::format::JsValueSerdeExt;
     ///
     /// # fn no_run() {
     /// let array = vec![1,2,3];
@@ -55,13 +55,13 @@ pub trait JsValueSerdeExt: private::Sealed {
     /// null to avoid panic.
     ///
     /// Usage of this API requires activating the `serde` feature of
-    /// the `gloo-utils` crate.
+    /// the `ianaio-utils` crate.
     ///
     /// # Example
     ///
     /// ```rust
     /// use wasm_bindgen::JsValue;
-    /// use gloo_utils::format::JsValueSerdeExt;
+    /// use ianaio_utils::format::JsValueSerdeExt;
     ///
     /// # fn no_run() {
     /// assert_eq!(JsValue::from("bar").into_serde::<String>().unwrap(), "bar");

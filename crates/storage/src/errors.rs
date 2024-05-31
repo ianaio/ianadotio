@@ -1,6 +1,6 @@
 //! All the errors.
 
-use gloo_utils::errors::JsError;
+use ianaio_utils::errors::JsError;
 use wasm_bindgen::{JsCast, JsValue};
 
 /// Error returned by this crate

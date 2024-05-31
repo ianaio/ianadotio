@@ -4,7 +4,7 @@
 
 use futures::channel::mpsc;
 use futures::prelude::*;
-use gloo_events::{EventListener, EventListenerOptions, EventListenerPhase};
+use ianaio_events::{EventListener, EventListenerOptions, EventListenerPhase};
 use js_sys::Error;
 use wasm_bindgen::{JsCast, JsValue, UnwrapThrowExt};
 use wasm_bindgen_test::*;

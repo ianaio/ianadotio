@@ -1,14 +1,15 @@
 [package]
-name = "gloo-storage"
+name = "ianaio-storage"
 description = "Convenience crate for working with local and session storage in browser"
-version = "0.2.2"
-authors = ["Rust and WebAssembly Working Group"]
-edition = "2018"
-license = "MIT OR Apache-2.0"
+version = "0.3.0"
+authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
+edition = "2021"
+license-file = "LICENSE.txt"
 readme = "README.md"
-repository = "https://github.com/rustwasm/gloo/tree/master/crates/storage"
-homepage = "https://github.com/rustwasm/gloo"
+repository = "https://github.com/ianaio/storage"
+homepage = "https://rustwasm.iana.io/storage"
 categories = ["api-bindings", "storage", "wasm"]
+rust-version = "1.80"
 
 [dependencies]
 wasm-bindgen = "0.2"
@@ -16,14 +17,12 @@ serde = "1.0"
 serde_json = "1.0"
 thiserror = "1.0"
 js-sys = "0.3"
-gloo-utils = { version = "0.1", path = "../utils" }
+ianaio-utils = { version = "0.2", path = "../utils" }
 [dependencies.web-sys]
 version = "0.3"
-features = [
-    "Storage",
-    "Window",
-]
+features = ["Storage", "Window"]
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3"
 serde = { version = "1.0", features = ["derive"] }
+

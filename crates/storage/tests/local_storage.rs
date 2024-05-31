@@ -1,4 +1,4 @@
-use gloo_storage::{LocalStorage, Storage};
+use ianaio_storage::{LocalStorage, Storage};
 use serde::Deserialize;
 use wasm_bindgen_test::{wasm_bindgen_test as test, wasm_bindgen_test_configure};
 

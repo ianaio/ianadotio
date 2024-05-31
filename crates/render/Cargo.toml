@@ -1,20 +1,20 @@
 [package]
-name = "gloo-render"
+name = "ianaio-render"
 description = "Convenience crate for working with browser's requestAnimationFrame"
-version = "0.1.1"
-authors = ["Rust and WebAssembly Working Group"]
-edition = "2018"
-license = "MIT OR Apache-2.0"
+version = "0.2.0"
+authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
+edition = "2021"
+license-file = "LICENSE.txt"
 readme = "README.md"
-repository = "https://github.com/rustwasm/gloo/tree/master/crates/storage"
-homepage = "https://github.com/rustwasm/gloo"
+repository = "https://github.com/ianaio/render"
+homepage = "https://rustwasm.iana.io/render"
 categories = ["api-bindings", "storage", "wasm"]
+rust-version = "1.80"
 
 [dependencies]
 wasm-bindgen = "0.2"
 
 [dependencies.web-sys]
 version = "0.3"
-features = [
-    "Window"
-]
+features = ["Window"]
+

@@ -24,7 +24,7 @@ impl Drop for ObjectUrlAllocation {
 /// # Example
 ///
 /// ```rust,no_run
-/// use gloo_file::{Blob, ObjectUrl};
+/// use ianaio_file::{Blob, ObjectUrl};
 ///
 /// let blob = Blob::new("hello world");
 /// let object_url = ObjectUrl::from(blob);

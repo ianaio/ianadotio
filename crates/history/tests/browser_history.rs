@@ -2,7 +2,7 @@ use std::rc::Rc;
 
 use wasm_bindgen_test::{wasm_bindgen_test as test, wasm_bindgen_test_configure};
 
-use gloo_history::{BrowserHistory, History};
+use ianaio_history::{BrowserHistory, History};
 
 wasm_bindgen_test_configure!(run_in_browser);
 

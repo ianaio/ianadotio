@@ -6,3 +6,4 @@ fn macro_tests() {
     t.compile_fail("tests/reactor/*-fail.rs");
     t.pass("tests/reactor/*-pass.rs");
 }
+

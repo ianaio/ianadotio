@@ -25,7 +25,7 @@ macro_rules! debug {
 /// Calls `console.dir()`
 /// ## Example
 /// ```no_run
-/// # use gloo_console::dir;
+/// # use ianaio_console::dir;
 /// # use js_sys::Array;
 /// dir!(Array::of2(&1.into(), &2.into()));
 /// ```
@@ -39,7 +39,7 @@ macro_rules! dir {
 /// Calls `console.dirxml()`
 /// ## Example
 /// ```no_run
-/// # use gloo_console::dirxml;
+/// # use ianaio_console::dirxml;
 /// # use js_sys::Array;
 /// dirxml!(Array::of2(&1.into(), &2.into()));
 /// ```

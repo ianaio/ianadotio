@@ -1,14 +1,16 @@
 [package]
-name = "gloo-worker-macros"
+name = "ianaio-worker-macros"
 version = "0.1.0"
-authors = ["Rust and WebAssembly Working Group"]
+authors = ["Jaroslaw Cichon <dev@iana.io>"]
 edition = "2021"
 readme = "README.md"
 description = "Convenience crate for working with Web Workers"
-repository = "https://github.com/rustwasm/gloo/tree/master/crates/worker"
-homepage = "https://github.com/rustwasm/gloo"
-license = "MIT OR Apache-2.0"
+repository = "https://github.com/ianaio/worker-macros"
+homepage = "https://www.iana.io/rustwasm/"
+license-file = "LICENSE.txt"
 categories = ["api-bindings", "asynchronous", "wasm"]
+rust-version = "1.80"
+documentation = "https://docs.iana.io/website"
 
 [lib]
 proc-macro = true
@@ -21,4 +23,5 @@ syn = { version = "2.0.15", features = ["full"] }
 
 [dev-dependencies]
 trybuild = "1"
-gloo = { path = "../..", features = ["futures"] }
+ianadotio = { path = "../..", features = ["futures"] }
+

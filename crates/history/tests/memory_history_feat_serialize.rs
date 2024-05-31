@@ -2,7 +2,7 @@ use wasm_bindgen_test::wasm_bindgen_test_configure;
 
 wasm_bindgen_test_configure!(run_in_browser);
 
-#[cfg(all(feature = "query"))]
+#[cfg(feature = "query")]
 mod feat_serialize {
     use wasm_bindgen_test::wasm_bindgen_test as test;
 
@@ -10,7 +10,7 @@ mod feat_serialize {
 
     use serde::{Deserialize, Serialize};
 
-    use gloo_history::{History, MemoryHistory};
+    use ianaio_history::{History, MemoryHistory};
 
     #[derive(Debug, Serialize, Deserialize, PartialEq)]
     struct Query {

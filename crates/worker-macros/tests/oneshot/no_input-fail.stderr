@@ -3,3 +3,4 @@ error: expected 1 argument
   |
 2 | async fn Worker() -> u32 {
   |          ^^^^^^
+
