@@ -173,4 +173,3 @@ where
         wasm_bindgen_futures::spawn_local(js_future);
     }
 }
-
