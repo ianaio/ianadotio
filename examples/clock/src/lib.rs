@@ -1,6 +1,6 @@
 use chrono::Timelike;
 use futures_util::{future::ready, stream::StreamExt};
-use gloo::timers::future::IntervalStream;
+use ianaio::timers::future::IntervalStream;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::spawn_local;
 

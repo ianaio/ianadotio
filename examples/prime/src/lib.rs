@@ -1,8 +1,8 @@
 use std::time::Duration;
 
 use futures::{FutureExt, StreamExt};
-use gloo::timers::future::sleep;
-use gloo::worker::reactor::{reactor, ReactorScope};
+use ianaio::timers::future::sleep;
+use ianaio::worker::reactor::{reactor, ReactorScope};
 
 use futures::sink::SinkExt;
 use serde::{Deserialize, Serialize};
@@ -51,14 +51,14 @@ pub async fn Prime(mut scope: ReactorScope<ControlSignal, u64>) {
 mod tests {
     use super::*;
 
-    use gloo::worker::Spawnable;
+    use ianaio::worker::Spawnable;
     use wasm_bindgen_test::*;
 
     wasm_bindgen_test_configure!(run_in_browser);
 
     #[wasm_bindgen_test]
     async fn prime_worker_works() {
-        gloo::console::log!("running test");
+        ianaio::console::log!("running test");
         let mut bridge = Prime::spawner().spawn("http://127.0.0.1:9999/example_prime_worker.js");
 
         bridge

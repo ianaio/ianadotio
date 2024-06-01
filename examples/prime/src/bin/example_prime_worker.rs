@@ -1,5 +1,5 @@
 use example_prime::Prime;
-use gloo::worker::Registrable;
+use ianaio::worker::Registrable;
 
 fn main() {
     console_error_panic_hook::set_once();

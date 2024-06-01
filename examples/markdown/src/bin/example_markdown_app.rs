@@ -1,8 +1,8 @@
 use example_markdown::MarkdownWorker;
 use wasm_bindgen::prelude::*;
 
-use gloo::utils::document;
-use gloo::worker::Spawnable;
+use ianaio::utils::document;
+use ianaio::worker::Spawnable;
 
 use wasm_bindgen_futures::spawn_local;
 

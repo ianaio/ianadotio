@@ -5,19 +5,19 @@ use std::time::Duration;
 use example_prime::{ControlSignal, Prime};
 use futures::sink::SinkExt;
 use futures::stream::StreamExt;
-use gloo::timers::future::sleep;
-use gloo::worker::Spawnable;
+use ianaio::timers::future::sleep;
+use ianaio::worker::Spawnable;
 use wasm_bindgen_futures::spawn_local;
 
 fn main() {
     console_error_panic_hook::set_once();
 
-    let start_btn = gloo::utils::body()
+    let start_btn = ianaio::utils::body()
         .query_selector("#start-btn")
         .unwrap()
         .unwrap();
 
-    let result_div = gloo::utils::body()
+    let result_div = ianaio::utils::body()
         .query_selector("#result")
         .unwrap()
         .unwrap();
@@ -31,7 +31,7 @@ fn main() {
         let result_div = result_div.clone();
         spawn_local(async move {
             while let Some(m) = bridge_stream.next().await {
-                let el = gloo::utils::document().create_element("div").unwrap();
+                let el = ianaio::utils::document().create_element("div").unwrap();
                 el.set_attribute("class", "result-item").unwrap();
                 el.set_text_content(Some(&m.to_string()));
 
@@ -44,7 +44,7 @@ fn main() {
 
     let bridge_sink = Rc::new(RefCell::new(bridge_sink));
 
-    let listener = gloo::events::EventListener::new(&start_btn.clone(), "click", move |_| {
+    let listener = ianaio::events::EventListener::new(&start_btn.clone(), "click", move |_| {
         let bridge_sink = bridge_sink.clone();
 
         if started.get() {

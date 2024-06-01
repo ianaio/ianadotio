@@ -1,4 +1,4 @@
-use gloo::worker::oneshot::oneshot;
+use ianaio::worker::oneshot::oneshot;
 use pulldown_cmark::{html, Parser};
 
 #[oneshot]
@@ -25,7 +25,7 @@ pub async fn MarkdownWorker(input: String) -> String {
 mod tests {
     use super::*;
 
-    use gloo::worker::Spawnable;
+    use ianaio::worker::Spawnable;
     use wasm_bindgen_test::*;
 
     wasm_bindgen_test_configure!(run_in_browser);
