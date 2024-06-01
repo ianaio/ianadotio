@@ -8,44 +8,44 @@
 #[cfg(feature = "console")]
 #[cfg_attr(docsrs, doc(cfg(feature = "console")))]
 #[doc(inline)]
-pub use gloo_console as console;
+pub use ianaio_console as console;
 #[cfg(feature = "dialogs")]
 #[cfg_attr(docsrs, doc(cfg(feature = "dialogs")))]
 #[doc(inline)]
-pub use gloo_dialogs as dialogs;
+pub use ianaio_dialogs as dialogs;
 #[cfg(feature = "events")]
 #[cfg_attr(docsrs, doc(cfg(feature = "events")))]
 #[doc(inline)]
-pub use gloo_events as events;
+pub use ianaio_events as events;
 #[cfg(feature = "file")]
 #[cfg_attr(docsrs, doc(cfg(feature = "file")))]
 #[doc(inline)]
-pub use gloo_file as file;
+pub use ianaio_file as file;
 #[cfg(feature = "history")]
 #[cfg_attr(docsrs, doc(cfg(feature = "history")))]
 #[doc(inline)]
-pub use gloo_history as history;
+pub use ianaio_history as history;
 #[cfg(feature = "net")]
 #[cfg_attr(docsrs, doc(cfg(feature = "net")))]
 #[doc(inline)]
-pub use gloo_net as net;
+pub use ianaio_net as net;
 #[cfg(feature = "render")]
 #[cfg_attr(docsrs, doc(cfg(feature = "render")))]
 #[doc(inline)]
-pub use gloo_render as render;
+pub use ianaio_render as render;
 #[cfg(feature = "storage")]
 #[cfg_attr(docsrs, doc(cfg(feature = "storage")))]
 #[doc(inline)]
-pub use gloo_storage as storage;
+pub use ianaio_storage as storage;
 #[cfg(feature = "timers")]
 #[cfg_attr(docsrs, doc(cfg(feature = "timers")))]
 #[doc(inline)]
-pub use gloo_timers as timers;
+pub use ianaio_timers as timers;
 #[cfg(feature = "utils")]
 #[cfg_attr(docsrs, doc(cfg(feature = "utils")))]
 #[doc(inline)]
-pub use gloo_utils as utils;
+pub use ianaio_utils as utils;
 #[cfg(feature = "worker")]
 #[cfg_attr(docsrs, doc(cfg(feature = "worker")))]
 #[doc(inline)]
-pub use gloo_worker as worker;
+pub use ianaio_worker as worker;
