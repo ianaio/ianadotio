@@ -232,12 +232,12 @@ where
         func
     }
 
-    // Sometimes users use gloo_worker directly, sometimes it is imported via gloo.
+    // Sometimes users use ianaio_worker directly, sometimes it is imported via ianaio.
     // We inspect Cargo.toml to find out.
     pub fn worker_crate_name() -> syn::Path {
-        if let Ok(m) = crate_name("gloo-worker") {
+        if let Ok(m) = crate_name("ianaio-worker") {
             return match m {
-                FoundCrate::Itself => parse_quote!(gloo_worker),
+                FoundCrate::Itself => parse_quote!(ianaio_worker),
                 FoundCrate::Name(m) => {
                     let crate_name = Ident::new(&m, Span::mixed_site());
 
@@ -246,9 +246,9 @@ where
             };
         }
 
-        if let Ok(m) = crate_name("gloo") {
+        if let Ok(m) = crate_name("ianaio") {
             return match m {
-                FoundCrate::Itself => parse_quote!(gloo::worker),
+                FoundCrate::Itself => parse_quote!(ianaio::worker),
                 FoundCrate::Name(m) => {
                     let crate_name = Ident::new(&m, Span::mixed_site());
 
@@ -278,4 +278,3 @@ impl Parse for WorkerName {
         })
     }
 }
-

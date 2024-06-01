@@ -6,4 +6,3 @@ fn Worker(_scope: ::ianaio::worker::reactor::ReactorScope<(), ()>) -> u32 {
 }
 
 fn main() {}
-

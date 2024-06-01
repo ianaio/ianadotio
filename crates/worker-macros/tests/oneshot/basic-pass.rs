@@ -6,4 +6,3 @@ async fn Worker(input: u32) -> u32 {
 }
 
 fn main() {}
-

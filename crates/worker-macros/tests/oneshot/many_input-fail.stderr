@@ -3,4 +3,3 @@ error: oneshot worker can accept at most 1 argument
   |
 2 | async fn Worker(input_1: u32, input_2: u32) -> u32 {
   |                               ^^^^^^^^^^^^
-

@@ -3,4 +3,3 @@ error: reactor workers must be asynchronous
   |
 4 | fn Worker(_scope: ::ianaio::worker::reactor::ReactorScope<(), ()>) {}
   |    ^^^^^^
-

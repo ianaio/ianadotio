@@ -4,4 +4,3 @@ async fn Worker() -> u32 {
 }
 
 fn main() {}
-

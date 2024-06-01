@@ -131,4 +131,3 @@ pub fn oneshot_impl(
 
     Ok(quoted)
 }
-

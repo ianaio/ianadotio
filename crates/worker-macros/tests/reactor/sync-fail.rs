@@ -4,4 +4,3 @@
 fn Worker(_scope: ::ianaio::worker::reactor::ReactorScope<(), ()>) {}
 
 fn main() {}
-
