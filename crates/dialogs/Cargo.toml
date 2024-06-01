@@ -1,13 +1,14 @@
 [package]
 name = "ianaio-dialogs"
 description = "Convenience crate for working with dialogs in browser"
-version = "0.2.0"
+version = "0.1.0"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
 edition = "2021"
 license-file = "LICENSE.txt"
 readme = "README.md"
 repository = "https://github.com/ianaio/dialogs"
 homepage = "https://rustwasm.iana.io/dialogs"
+documentation = "https://docs.iana.io/rustwasm/dialogs"
 categories = ["api-bindings", "asynchronous", "wasm"]
 rust-version = "1.80"
 

@@ -3,11 +3,12 @@ name = "ianaio-utils"
 version = "0.1.0"
 edition = "2021"
 description = "Convenience crate for common `web_sys` features"
-authors = ["Jaroslaw Cichon <dev@iana.io>"]
+authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
 license-file = "LICENSE.txt"
 readme = "README.md"
 repository = "https://github.com/ianaio/utils"
-homepage = "https://github.com/rustwasm/ianaio"
+homepage = "https://rustwasm.ianaio/utils"
+documentation = "https://docs.iana.io/rustwasm/utils"
 categories = ["api-bindings", "wasm"]
 rust-version = "1.80"
 
@@ -41,3 +42,4 @@ serde_derive = "1.0"
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
+

@@ -1,7 +1,7 @@
 [package]
 name = "ianaio-console"
 description = "Convenience crate for working with browser's console"
-version = "0.3.0"
+version = "0.1.0"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
 edition = "2021"
 license-file = "LICENSE.txt"
@@ -16,12 +16,12 @@ rust-version = "1.80"
 wasm-bindgen = "0.2"
 js-sys = "0.3"
 serde = { version = "1", features = ["derive"] }
-ianaio-utils = { version = "0.2", path = "../utils", features = ["serde"] }
+ianaio-utils = { version = "0.1.0", path = "../utils", features = ["serde"] }
 [dependencies.web-sys]
 version = "0.3"
 features = ["console", "Document"]
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.4"
-ianaio-timers = { version = "0.3.0", path = "../timers" }
+ianaio-timers = { version = "0.1.0", path = "../timers" }
 

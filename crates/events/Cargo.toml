@@ -1,13 +1,14 @@
 [package]
 name = "ianaio-events"
 description = "Convenience crate for working with DOM event listeners"
-version = "0.2.0"
-authors = ["Jaroslaw Cichon <dev@iana.io>"]
+version = "0.1.0"
+authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
 edition = "2021"
 license-file = "LICENSE.txt"
 readme = "README.md"
 repository = "https://github.com/ianaio/events"
 homepage = "https://rustwasm.iana.io/events"
+documentation = "https://docs.iana.io/rustwasm/events"
 categories = ["api-bindings", "asynchronous", "web-programming", "wasm"]
 rust-version = "1.80"
 
