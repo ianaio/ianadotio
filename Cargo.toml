@@ -1,29 +1,29 @@
 [package]
 name = "ianadotio"
 version = "0.1.0"
-authors = ["Jaroslaw Cichon <dev@iana.io>"]
+authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
+description = "Rust Wasm TS website"
 edition = "2021"
 homepage = "https://github.com/ianaio/ianadotio#readme"
 keywords = ["ianaio","systems", "systemd", "rust", "debian"]
 categories = ["command-line-utilities", "rust-systemd", "production-tools::cargo-plugins"]
 repository = "https://github.com/ianaio/ianadotio"
+documentation = "https://docs.iana.io/rustwasm/website"
 readme = "README.md"
-description = "Rust Wasm TS"
 license-file = "LICENSE.txt"
-documentation = "https://docs.iana.io/website"
 
 [dependencies]
-gloo-timers = { version = "0.2", path = "crates/timers", optional = true }
-gloo-events = { version = "0.1", path = "crates/events", optional = true }
-gloo-file = { version = "0.2", path = "crates/file", optional = true }
-gloo-dialogs = { version = "0.1", path = "crates/dialogs", optional = true }
-gloo-storage = { version = "0.2", path = "crates/storage", optional = true }
-gloo-render = { version = "0.1", path = "crates/render", optional = true }
-gloo-console = { version = "0.2", path = "crates/console", optional = true }
-gloo-utils = { version = "0.1", path = "crates/utils", optional = true }
-gloo-history = { version = "0.1", path = "crates/history", optional = true }
-gloo-worker = { version = "0.2", path = "crates/worker", optional = true }
-gloo-net = { version = "0.3", path = "crates/net", optional = true }
+ianaio-timers = { version = "0.1.0", path = "crates/timers", optional = true }
+ianaio-events = { version = "0.1.0", path = "crates/events", optional = true }
+ianaio-file = { version = "0.1.0", path = "crates/file", optional = true }
+ianaio-dialogs = { version = "0.1.0", path = "crates/dialogs", optional = true }
+ianaio-storage = { version = "0.1.0", path = "crates/storage", optional = true }
+ianaio-render = { version = "0.1.0", path = "crates/render", optional = true }
+ianaio-console = { version = "0.1.0", path = "crates/console", optional = true }
+ianaio-utils = { version = "0.1.0", path = "crates/utils", optional = true }
+ianaio-history = { version = "0.1.0", path = "crates/history", optional = true }
+ianaio-worker = { version = "0.1.0", path = "crates/worker", optional = true }
+ianaio-net = { version = "0.1.0", path = "crates/net", optional = true }
 
 [features]
 default = [
@@ -43,21 +43,21 @@ futures = [
     "timers",
     "file",
     "worker",
-    "gloo-timers/futures",
-    "gloo-file/futures",
-    "gloo-worker/futures"
+    "ianaio-timers/futures",
+    "ianaio-file/futures",
+    "ianaio-worker/futures"
 ]
-timers = ["gloo-timers"]
-events = ["gloo-events"]
-file = ["gloo-file"]
-dialogs = ["gloo-dialogs"]
-storage = ["gloo-storage"]
-render = ["gloo-render"]
-console = ["gloo-console"]
-utils = ["gloo-utils"]
-history = ["gloo-history"]
-worker = ["gloo-worker"]
-net = ["gloo-net"]
+timers = ["ianaio-timers"]
+events = ["ianaio-events"]
+file = ["ianaio-file"]
+dialogs = ["ianaio-dialogs"]
+storage = ["ianaio-storage"]
+render = ["ianaio-render"]
+console = ["ianaio-console"]
+utils = ["ianaio-utils"]
+history = ["ianaio-history"]
+worker = ["ianaio-worker"]
+net = ["ianaio-net"]
 
 [workspace]
 members = [
