@@ -25,7 +25,7 @@ const config = {
   },
   favicon: 'img/Gloo-Logo.ico',
   organizationName: 'ianaio',
-  projectName: 'ianadotio',
+  projectName: 'ianaio',
   themeConfig: {
     navbar: {
       title: 'iana.io',
@@ -41,48 +41,48 @@ const config = {
           position: 'right',
           items: [
             {
-              label: 'gloo',
-              href: 'https://docs.rs/gloo',
+              label: 'ianaio',
+              href: 'https://docs.rs/ianaio',
             },
             {
               label: 'dialogs',
-              href: 'https://docs.rs/gloo-dialogs/',
+              href: 'https://docs.rs/ianaio-dialogs/',
             },
             {
               label: 'events',
-              href: 'https://docs.rs/gloo-events/',
+              href: 'https://docs.rs/ianaio-events/',
             },
             {
               label: 'file',
-              href: 'https://docs.rs/gloo-file/',
+              href: 'https://docs.rs/ianaio-file/',
             },
             {
               label: 'history',
-              href: 'https://docs.rs/gloo-history/',
+              href: 'https://docs.rs/ianaio-history/',
             },
             {
               label: 'net',
-              href: 'https://docs.rs/gloo-net/',
+              href: 'https://docs.rs/ianaio-net/',
             },
             {
               label: 'render',
-              href: 'https://docs.rs/gloo-render/',
+              href: 'https://docs.rs/ianaio-render/',
             },
             {
               label: 'storage',
-              href: 'https://docs.rs/gloo-storage/',
+              href: 'https://docs.rs/ianaio-storage/',
             },
             {
               label: 'timers',
-              href: 'https://docs.rs/gloo-timers/',
+              href: 'https://docs.rs/ianaio-timers/',
             },
             {
               label: 'utils',
-              href: 'https://docs.rs/gloo-utils/',
+              href: 'https://docs.rs/ianaio-utils/',
             },
             {
               label: 'worker',
-              href: 'https://docs.rs/gloo-worker/',
+              href: 'https://docs.rs/ianaio-worker/',
             }
           ],
         },
@@ -106,7 +106,7 @@ const config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/DFgBACb898j', // #gloo in Yew server
+              href: 'https://discord.gg/DFgBACb898j', // #ianaio in Yew server
             },
           ],
         },
@@ -119,7 +119,7 @@ const config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/rustwasm/gloo',
+              href: 'https://github.com/rustwasm/ianaio',
             },
           ],
         },
@@ -140,13 +140,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/rustwasm/gloo/blob/master/website/',
+            'https://github.com/rustwasm/ianaio/blob/master/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/rustwasm/gloo/blob/master/website/',
+            'https://github.com/rustwasm/ianaio/blob/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

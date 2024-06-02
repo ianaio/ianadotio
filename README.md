@@ -1,7 +1,7 @@
-# Gloo
+# IanaIO
 
 <p align="center">
-  <img src="https://github.com/rustwasm/gloo/blob/master/website/static/img/Gloo-Logo.svg" width="400" height="300" />
+  <img src="https://github.com/rustwasm/ianaio/blob/master/website/static/img/IanaIO-Logo.svg" width="400" height="300" />
 </p>
 
 **A toolkit for building fast, reliable Web applications and libraries with Rust
@@ -20,9 +20,9 @@ and Wasm.**
 
 ## What?
 
-Gloo is a collection of libraries, and those libraries provide ergonomic Rust 
+IanaIO is a collection of libraries, and those libraries provide ergonomic Rust 
 wrappers for browser APIs. `web-sys`/`js-sys` are very difficult/inconvenient 
-to use directly so gloo provides wrappers around the raw bindngs which makes it easier
+to use directly so ianaio provides wrappers around the raw bindngs which makes it easier
 to consume those APIs. This is why it is called a "toolkit", instead of "library"
 or "framework".
 
@@ -64,32 +64,32 @@ deliberately cultivate our library ecosystem by building a modular toolkit:
 > existing JavaScript project? Grab that one targeted library you need out from
 > the toolkit and use it by itself.
 
-Gloo is this modular toolkit.
+IanaIO is this modular toolkit.
 
 [announcing-web-sys]: https://rustwasm.github.io/2018/09/26/announcing-web-sys.html
 [roadmap]: https://github.com/rustwasm/rfcs/pull/7
 
 ## Goals
 
-* **Support both whole Web applications and small, targeted libraries:** Gloo,
+* **Support both whole Web applications and small, targeted libraries:** IanaIO,
   and the collection of utility crates that make up its toolkit, should help you
   be productive if you are writing a green-field web application with Rust and
   Wasm. And it should also help you be productive if you are writing a small,
   targeted Wasm library that will be integrated into an existing JavaScript
   application.
 
-* **Cultivate the Rust and Wasm library ecosystem:** We want to use Gloo as a
+* **Cultivate the Rust and Wasm library ecosystem:** We want to use IanaIO as a
   forcing function for creating and sharing the building blocks of Web
   development. The kinds of libraries that *any* framework or high-level library
   would need to build. We want to explicitly disentangle these libraries and
   make them available for sharing across the whole ecosystem.
 
-* **Modular Toolkit, not Framework:** Gloo should be a loose collection of
-  utility crates that can be used individually, or all together. Gloo doesn't
+* **Modular Toolkit, not Framework:** IanaIO should be a loose collection of
+  utility crates that can be used individually, or all together. IanaIO doesn't
   assume that it "owns" the whole Webpage, that it controls the Wasm `start`
   function, etc. This lack of assumptions enables reaching more use cases (such
   as surgically replacing a hot code path from JS) than monolithic frameworks
-  can. Wherever possible, Gloo should prefer interfaces over implementations, so
+  can. Wherever possible, IanaIO should prefer interfaces over implementations, so
   that different implementations with different approaches are swap-able.
 
 * **Fast:** Let's leverage Rust's zero-cost abstractions, and design with
@@ -101,7 +101,7 @@ Gloo is this modular toolkit.
 
 * **Small:** Small code size for faster page loads. No accidentally pulling in
   all of the panicking and formatting infrastructure. Users shouldn't have to
-  make a trade off between using Gloo libraries and having small Wasm binaries.
+  make a trade off between using IanaIO libraries and having small Wasm binaries.
 
 * **Idiomatic:** We want to build Rust-y APIs, that feel natural to use. The
   Web's APIs were not designed for the Rust language, and you can feel the
@@ -110,13 +110,13 @@ Gloo is this modular toolkit.
 
 ## Example
 
-This example uses `gloo::events` for adding event listeners and `gloo::timers`
+This example uses `ianaio::events` for adding event listeners and `ianaio::timers`
 for creating timeouts. It creates a `<button>` element and adds a "click" event
 listener to it. Whenever the button is clicked, it starts a one second timeout,
 which sets the button's text content to "Hello from one second ago!".
 
 ```rust
-use gloo::{events::EventListener, timers::callback::Timeout};
+use ianaio::{events::EventListener, timers::callback::Timeout};
 use wasm_bindgen::prelude::*;
 
 pub struct DelayedHelloButton {
@@ -147,4 +147,4 @@ impl DelayedHelloButton {
 
 ## Get Involved!
 
-Want to help us build Gloo? Check out [`CONTRIBUTING.md`](./CONTRIBUTING.md)!
+Want to help us build IanaIO? Check out [`CONTRIBUTING.md`](./CONTRIBUTING.md)!

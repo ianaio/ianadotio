@@ -1,14 +1,14 @@
 [package]
-name = "ianadotio"
+name = "ianaio"
 version = "0.1.0"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
-description = "Rust Wasm TS website"
+description = "IanaIO backend frontend written in Rust Web Assembly RustWasm TS website"
 edition = "2021"
-homepage = "https://github.com/ianaio/ianadotio#readme"
-keywords = ["ianaio","systems", "systemd", "rust", "debian"]
+homepage = "https://www.iana.io"
+keywords = ["ianaio","rust", "assembly", "backend", "frontend"]
 categories = ["command-line-utilities", "rust-systemd", "production-tools::cargo-plugins"]
-repository = "https://github.com/ianaio/ianadotio"
-documentation = "https://docs.iana.io/rustwasm/website"
+repository = "https://github.com/ianaio/ianaio"
+documentation = "https://docs.iana.io/rustwasm/ianaio"
 readme = "README.md"
 license-file = "LICENSE.txt"
 

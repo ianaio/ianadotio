@@ -66,7 +66,7 @@ digraph {
   accepted -> wip_impl [label = <
     <table border="0">
       <tr><td align="left" cellpadding="5"><b>🔨 Pull Request Created</b></td></tr>
-      <tr><td align="left">Adds new <font face="monospace">gloo_whatever</font> crate</td></tr>
+      <tr><td align="left">Adds new <font face="monospace">ianaio_whatever</font> crate</td></tr>
       <tr><td align="left">Adds tests/docs/examples</td></tr>
     </table>
   >];

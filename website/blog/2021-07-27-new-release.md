@@ -17,9 +17,9 @@ This release focuses on adding new features and crates.
 
 ### New crates
 
-#### `gloo-console`
+#### `ianaio-console`
  
-`gloo-console` provides an ergonomic way to access the browser's console API using macros:
+`ianaio-console` provides an ergonomic way to access the browser's console API using macros:
 
 ```rust
 log!("text");
@@ -39,9 +39,9 @@ let object = JsValue::from("Some JsValue");
 log!("literal", object);
 ```
 
-#### `gloo-dialogs`
+#### `ianaio-dialogs`
 
-`gloo-dialogs` provides wrappers for the following functions:
+`ianaio-dialogs` provides wrappers for the following functions:
 
 - [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
 - [`confirm`](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
@@ -60,9 +60,9 @@ prompt("What do you want to say?");
 confirm("Are you sure?");
 ```
 
-#### `gloo-render`
+#### `ianaio-render`
 
-`gloo-render` provides wrapper for 
+`ianaio-render` provides wrapper for 
 [`requestAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame):
 
 ```rust
@@ -71,9 +71,9 @@ request_animation_frame(|_| {
 })
 ```
 
-#### `gloo-storage`
+#### `ianaio-storage`
 
-`gloo-storage` provides wrappers for the [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API).
+`ianaio-storage` provides wrappers for the [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API).
 It can be used to access both local storage and session storage.
 
 ### Other changes
