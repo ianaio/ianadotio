@@ -19,7 +19,7 @@ ianaio-file = { version = "0.1.0", path = "crates/file", optional = true }
 ianaio-dialogs = { version = "0.1.0", path = "crates/dialogs", optional = true }
 ianaio-storage = { version = "0.1.0", path = "crates/storage", optional = true }
 ianaio-render = { version = "0.1.0", path = "crates/render", optional = true }
-ianaio-console = { version = "0.1.0", path = "crates/console", optional = true }
+ianaio-console = { version = "0.1.1", path = "crates/console", optional = true }
 ianaio-utils = { version = "0.1.0", path = "crates/utils", optional = true }
 ianaio-history = { version = "0.1.0", path = "crates/history", optional = true }
 ianaio-worker = { version = "0.1.0", path = "crates/worker", optional = true }
