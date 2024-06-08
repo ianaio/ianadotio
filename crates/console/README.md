@@ -11,12 +11,12 @@
   <h3>
     <a href="https://docs.rs/ianaio-console">API Docs</a>
     <span> | </span>
-    <a href="https://github.com/rustwasm/ianaio/blob/master/CONTRIBUTING.md">Contributing</a>
+    <a href="https://github.com/ianaio/console/blob/main/CONTRIBUTING.md">Contributing</a>
     <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
+    <a href="https://discord.com/channels/1247475712001314857/1247475712001314860/">Chat</a>
   </h3>
 
-<sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
+<sub>Built with 🦀🕸 by <a href="https://rustwasm.ianaio.io/">The IanaIO Rust and WebAssembly Working Group</a></sub>
 </div>
 
 The JavaScript's `console` object provides access to the browser's console.
@@ -33,3 +33,4 @@ use ianaio_console::log;
 let object = JsValue::from("any JsValue can be logged");
 log!("text", object);
 ```
+

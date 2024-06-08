@@ -1,6 +1,6 @@
 [package]
 name = "ianaio-utils"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Convenience crate for common `web_sys` features"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
