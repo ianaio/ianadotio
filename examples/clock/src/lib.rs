@@ -41,3 +41,4 @@ fn render_date(el: &web_sys::Element) {
     // Set the contents of `el` to our date string
     el.set_text_content(Some(&date_str));
 }
+
