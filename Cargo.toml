@@ -1,6 +1,6 @@
 [package]
 name = "ianaio"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
 description = "IanaIO backend frontend written in Rust Web Assembly RustWasm TS website"
 edition = "2021"
@@ -74,9 +74,9 @@ members = [
     "crates/worker-macros",
     "crates/net",
 
-    "examples/markdown",
-    "examples/clock",
-    "examples/prime",
+    "examples/ianaio-markdown",
+    "examples/ianaio-clock",
+    "examples/ianaio-prime",
 ]
 
 # Passing arguments to the docsrs builder in order to properly document cfg's.
