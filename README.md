@@ -1,7 +1,7 @@
 # IanaIO
 
 <p align="center">
-  <img src="https://github.com/rustwasm/ianaio/blob/master/website/static/img/IanaIO-Logo.svg" width="400" height="300" />
+<!--  <img src="https://github.com/rustwasm/ianaio/blob/master/website/static/img/IanaIO-Logo.svg" width="400" height="300" /> -->
 </p>
 
 **A toolkit for building fast, reliable Web applications and libraries with Rust
