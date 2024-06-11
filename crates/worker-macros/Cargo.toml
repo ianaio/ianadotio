@@ -1,6 +1,6 @@
 [package]
 name = "ianaio-worker-macros"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
 edition = "2021"
 readme = "README.md"
@@ -23,5 +23,5 @@ syn = { version = "2.0.15", features = ["full"] }
 
 [dev-dependencies]
 trybuild = "1"
-ianaio = { path = "../..", features = ["futures"] }
+ianaio = { version = "0.1.1", path = "../..", features = ["futures"] }
 
