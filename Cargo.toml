@@ -2,7 +2,7 @@
 name = "ianaio"
 version = "0.1.0"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
-description = "IanaIO backend frontend written in Rust Web Assembly RustWasm TS website"
+description = "IanaIO backend frontend written in Rust Web Assembly RustWasm TS website."
 edition = "2021"
 homepage = "https://www.iana.io"
 keywords = ["ianaio","rust", "assembly", "backend", "frontend"]
