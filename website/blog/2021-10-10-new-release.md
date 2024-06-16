@@ -17,14 +17,14 @@ This release focuses on adding new features and crates.
 
 ### Features
 
-* `ianaio-utils` crate: `ianaio_utils` wraps common `web_sys` features to provide cleaner API for accessing `window`,
+* `gloo-utils` crate: `gloo_utils` wraps common `web_sys` features to provide cleaner API for accessing `window`,
   working with JS Errors, etc.
-* Add `dbg!` equivalent in `ianaio_console` for easy console.log debugging.
+* Add `dbg!` equivalent in `gloo_console` for easy console.log debugging.
 
 ### Fixes
 
-* Remove the unnecessary copy in `Blob::new` ([#152](https://github.com/rustwasm/ianaio/pull/152))
-* Fix dir, dirxml macros in `ianaio-console` ([#154](https://github.com/rustwasm/ianaio/pull/154))
+* Remove the unnecessary copy in `Blob::new` ([#152](https://github.com/rustwasm/gloo/pull/152))
+* Fix dir, dirxml macros in `gloo-console` ([#154](https://github.com/rustwasm/gloo/pull/154))
 
 ## Looking for contributors
 

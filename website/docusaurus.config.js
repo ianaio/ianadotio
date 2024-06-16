@@ -9,8 +9,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IANA SYSTEMS - AI-Human Hybrid Systems for security and analytics.',
-  tagline: ' Unique security system - Analytics - We build tools that matter most ',
+  title: 'IanaIO',
+  tagline: ' A modular toolkit for building fast, reliable Web applications and libraries with Rust language and Web Assembly',
   url: 'https://www.iana.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -23,14 +23,14 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  favicon: 'img/Gloo-Logo.ico',
-  organizationName: 'ianaio',
+  favicon: 'img/ianaio-logo.ico',
+  organizationName: 'rustwasm',
   projectName: 'ianaio',
   themeConfig: {
     navbar: {
-      title: 'iana.io',
+      title: 'IanaIO',
       logo: {
-        alt: 'IANA SYSTEM at www.iana.io',
+        alt: 'Ferris <3 IanaIO',
         src: 'img/ianaio-logo.webp',
       },
       items: [
@@ -87,14 +87,9 @@ const config = {
           ],
         },
         {
-          href: 'https://analytics.iana.io',
-          label: 'Analytics',
-          position: 'left',
-        },
-        {
-          href: 'https://www.iana.io',
-          label: 'Security',
-          position: 'left',
+          href: 'https://github.com/ianaio/ianaio',
+          label: 'GitHub',
+          position: 'right',
         },
       ],
     },
@@ -106,7 +101,7 @@ const config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/DFgBACb898j', // #ianaio in Yew server
+              href: 'https://discord.com/channels/1247475712001314857/1247475712001314860', // #IanaIO in Yew server
             },
           ],
         },
@@ -119,7 +114,7 @@ const config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/rustwasm/ianaio',
+              href: 'https://github.com/ianaio/ianaio',
             },
           ],
         },
@@ -140,13 +135,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/rustwasm/ianaio/blob/master/website/',
+            'https://github.com/ianaio/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/rustwasm/ianaio/blob/master/website/',
+            'https://github.com/ianaio/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

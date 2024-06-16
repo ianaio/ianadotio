@@ -15,7 +15,7 @@ Web applications and libraries with Rust and WASM.
 
 This release focuses on adding new features and crates.
 
-### New crate: `ianaio-worker`
+### New crate: `gloo-worker`
 
 Gloo workers are a way to offload tasks to web workers. These are run concurrently using
 [web-workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
@@ -26,19 +26,19 @@ This allows us to have a neat abstraction over the browser's Web Workers API whi
 
 ### Features
 
-This release has been light on new features. The only improvement is `ianaio_utils` now providing a new wrapper 
+This release has been light on new features. The only improvement is `gloo_utils` now providing a new wrapper 
 to obtain the document `head`.
 
 ## Notable mention from last release
 
-Last release, Gloo v0.5.0 did not receive its own blog post. That released introduced one major new crate: `ianaio-history`
-amongst other small improvements, which can be found in the [GitHub changelog](https://github.com/rustwasm/ianaio/releases/tag/0.5.0).
+Last release, Gloo v0.5.0 did not receive its own blog post. That released introduced one major new crate: `gloo-history`
+amongst other small improvements, which can be found in the [GitHub changelog](https://github.com/rustwasm/gloo/releases/tag/0.5.0).
 
-### `ianaio-history`
+### `gloo-history`
 
 Gloo history provides wrappers for browser's history API. It exposes ergonomic Rust APIs for the browser's APIs which 
 can be used to build other tools. In fact, [`yew-router`](https://github.com/yewstack/yew/pull/2239) has been 
-reworked to use `ianaio-history` under-the-hood.
+reworked to use `gloo-history` under-the-hood.
 
 ## Looking for contributors
 

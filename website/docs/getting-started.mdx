@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Using the Gloo toolkit"
+description: "Using the IanaIO toolkit"
 ---
 
 ## Using the Whole Toolkit
@@ -32,14 +32,14 @@ use ianaio::{timers, events};
 
 ## Using a Single Crate
 
-Each crate in the Gloo toolkit can also be used independently from the rest of
+Each crate in the IanaIO toolkit can also be used independently from the rest of
 the toolkit. This is a good choice for people making library crates that are
 intended to be used by other people making Web applications or top-level crates
 that are compiled into Wasm binaries.
 
 ### `Cargo.toml`
 
-If we want to use only the Gloo functionality that wraps `setTimeout`, we can
+If we want to use only the IanaIO functionality that wraps `setTimeout`, we can
 add `ianaio-timers` to our dependencies in `Cargo.toml`:
 
 ```toml

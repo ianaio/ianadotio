@@ -77,6 +77,8 @@ members = [
     "examples/ianaio-markdown",
     "examples/ianaio-clock",
     "examples/ianaio-prime",
+    "examples/ianaio-file-hash",
+    "examples/ianaio-history-wasi",
 ]
 
 # Passing arguments to the docsrs builder in order to properly document cfg's.
