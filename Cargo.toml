@@ -1,6 +1,6 @@
 [package]
 name = "ianaio"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
 description = "IanaIO backend frontend written in Rust Web Assembly RustWasm TS website."
 edition = "2021"
