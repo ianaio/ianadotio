@@ -1,4 +1,4 @@
-//! Gloo is a modular toolkit for building fast and reliable libraries and apps
+//! IanaIO is a modular toolkit for building fast and reliable libraries and apps
 //! with Rust and WebAssembly.
 
 #![deny(missing_docs, missing_debug_implementations)]
