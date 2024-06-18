@@ -2,12 +2,12 @@
 name = "ianaio"
 version = "0.1.7"
 authors = ["Jaroslaw Cichon <dev.iana.io> IanaIO Rust and WebAssembly Working Group"]
-description = "IanaIO backend frontend written in Rust Web Assembly RustWasm TS website."
+description = "IanaIO - documents, blog, showcases, resources ."
 edition = "2021"
-homepage = "https://www.iana.io"
-keywords = ["ianaio","rust", "assembly", "backend", "frontend"]
+homepage = "https://docs.iana.io"
+keywords = ["ianaio","documents", "blog", "showcases", "resources"]
 categories = ["command-line-utilities", "rust-systemd", "production-tools::cargo-plugins"]
-repository = "https://github.com/ianaio/ianaio"
+repository = "https://github.com/ianaio/ianaio/tree/docsianaio"
 documentation = "https://docs.iana.io/rustwasm/ianaio"
 readme = "README.md"
 license-file = "LICENSE.txt"

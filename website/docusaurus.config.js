@@ -4,14 +4,16 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+// See: https://github.com/facebook/docusaurus/issues/8940 
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IanaIO',
-  tagline: ' A modular toolkit for building fast, reliable Web applications and libraries with Rust language and Web Assembly',
-  url: 'https://www.iana.io',
+  title: 'IanaIO - docs',
+  tagline: ' IanaIO documents. ',
+  url: 'https://docs.iana.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -27,10 +29,15 @@ const config = {
   organizationName: 'rustwasm',
   projectName: 'ianaio',
   themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    }, 
     navbar: {
       title: 'IanaIO',
       logo: {
-        alt: 'Ferris <3 IanaIO',
+        alt: 'AI <3 IanaIO',
         src: 'img/ianaio-logo.webp',
       },
       items: [
@@ -97,11 +104,23 @@ const config = {
       style: 'dark',
       links: [
         {
+          title: 'Follow us',
+          items: [
+            {
+              alt: 'AI <3 IanaIO Logo',
+              label: 'X',
+              href: 'https://x.com/_ianaio', 
+              width: 25,
+              height: 25,
+            },
+          ],
+	},
+        {
           title: 'Community',
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.com/channels/1247475712001314857/1247475712001314860', // #IanaIO in Yew server
+              href: 'https://discord.com/channels/1247475712001314857/1247475712001314860',
             },
           ],
         },
@@ -119,6 +138,14 @@ const config = {
           ],
         },
       ],
+      logo: {
+        alt: 'IanaIO logo',
+        src: 'img/ianaio-logo.webp',
+        href: 'https://docs.iana.io',
+        width: 27.83,
+        height: 32,
+      },
+      copyright: `Copyright © ${new Date().getFullYear()} IanaIO, Inc.`, // You can also put own HTML here
     },
     prism: {
       theme: lightCodeTheme,
@@ -135,13 +162,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ianaio/website/',
+            'https://github.com/ianaio/website/blob/docsianaio/sidebars.js',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ianaio/website/',
+            'https://github.com/ianaio/website/tree/docsianaio/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -152,3 +179,4 @@ const config = {
 };
 
 module.exports = config;
+
