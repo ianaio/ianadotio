@@ -24,7 +24,25 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
+.hero__title,.title_f1Hy {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    color: white;
+}
+
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] .hero__title,.title_f1Hy {
+  color: white;
+}
+
+html[data-theme='dark'] .hero__subtitle {
+  color: white;
 }
 
