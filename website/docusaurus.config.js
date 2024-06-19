@@ -11,9 +11,9 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IanaIO',
-  tagline: ' A hybrid crypto data security software. Provides the best quality and a unique data not only for global community but also for governments and corporations. ',
-  url: 'https://security.iana.io',
+  title: 'IanaIO - docs',
+  tagline: ' IanaIO documents. ',
+  url: 'https://docs.iana.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,8 +43,59 @@ const config = {
       items: [
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://docs.iana.io',
-          label: 'Docs',
+          type: 'dropdown',
+          label: 'docs.rs',
+          position: 'right',
+          items: [
+            {
+              label: 'ianaio',
+              href: 'https://docs.rs/ianaio',
+            },
+            {
+              label: 'dialogs',
+              href: 'https://docs.rs/ianaio-dialogs/',
+            },
+            {
+              label: 'events',
+              href: 'https://docs.rs/ianaio-events/',
+            },
+            {
+              label: 'file',
+              href: 'https://docs.rs/ianaio-file/',
+            },
+            {
+              label: 'history',
+              href: 'https://docs.rs/ianaio-history/',
+            },
+            {
+              label: 'net',
+              href: 'https://docs.rs/ianaio-net/',
+            },
+            {
+              label: 'render',
+              href: 'https://docs.rs/ianaio-render/',
+            },
+            {
+              label: 'storage',
+              href: 'https://docs.rs/ianaio-storage/',
+            },
+            {
+              label: 'timers',
+              href: 'https://docs.rs/ianaio-timers/',
+            },
+            {
+              label: 'utils',
+              href: 'https://docs.rs/ianaio-utils/',
+            },
+            {
+              label: 'worker',
+              href: 'https://docs.rs/ianaio-worker/',
+            }
+          ],
+        },
+        {
+          href: 'https://github.com/ianaio/ianaio',
+          label: 'GitHub',
           position: 'right',
         },
       ],
@@ -90,7 +141,7 @@ const config = {
       logo: {
         alt: 'IanaIO logo',
         src: 'img/ianaio-logo.webp',
-        href: 'https://www.iana.io',
+        href: 'https://docs.iana.io',
         width: 27.83,
         height: 32,
       },
@@ -111,13 +162,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ianaio/website/',
+            'https://github.com/ianaio/website/blob/docsianaio/sidebars.js',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ianaio/website/',
+            'https://github.com/ianaio/website/tree/docsianaio/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

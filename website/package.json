@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "author": "Jaroslaw Cichon <dev@iana.io>",
-  "description": "IanaIO Security web app",
+  "description": "IanaIO - documents, showcases, resources",
   "repository": {
   "type": "git",
   "url": "https://github.com/ianaio/website/tree/securityianaio"
@@ -12,10 +12,10 @@
   "url": "https://github.com/ianaio/website/issues"
   },
   "keywords": [
-    "typescript",
-    "document",
-    "ianaio",
-    "rustwasm"
+    "showcases",
+    "documents",
+    "blog",
+    "resources"
   ],
   "license-file": "LICENSE.txt",
   "scripts": {
