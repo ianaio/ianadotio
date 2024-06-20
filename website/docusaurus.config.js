@@ -12,7 +12,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'IanaIO',
-  tagline: ' A hybrid crypto data security software. Provides the best quality and a unique data not only for global community but also for governments and corporations. ',
+  tagline: ' A hybrid AI-Human software. Provides the best quality and a unique data not only for global community but also for governments and corporations. ',
   url: 'https://www.iana.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -42,6 +42,11 @@ const config = {
       },
       items: [
         {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          href: 'https://security.iana.io',
+          label: 'Security',
+          position: 'left',
+        },
         {
           href: 'https://docs.iana.io',
           label: 'Docs',
