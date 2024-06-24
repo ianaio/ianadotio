@@ -11,9 +11,9 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IanaIO',
-  tagline: ' A hybrid crypto data security software. Provides the best quality and a unique data not only for global community but also for governments and corporations. ',
-  url: 'https://www.iana.io',
+  title: 'Proud America',
+  tagline: ' American Made American Owned - Top Quality American Patriotic Clothes ',
+  url: 'https://www.proudamerica.us',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -25,9 +25,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  favicon: 'img/ianaio-logo.ico',
+  favicon: 'img/proudamericaus.ico',
   organizationName: 'rustwasm',
-  projectName: 'ianaio',
+  projectName: 'proudamerica',
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
@@ -35,18 +35,15 @@ const config = {
       respectPrefersColorScheme: true,
     }, 
     navbar: {
-      title: 'IanaIO',
+      title: 'Proud America',
       logo: {
-        alt: 'AI <3 IanaIO',
-        src: 'img/ianaio-logo.webp',
+        alt: 'AI <3 Proud America',
+        src: 'img/proudamericaus.png',
       },
       items: [
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://docs.iana.io',
-          label: 'Docs',
-          position: 'right',
-        },
+        {to: '/blog', label: 'Blog', position: 'left'}, 
+	{to: '/shop', label: 'Shop', position: 'left'},
+        {to: '/patriots', label: 'Patriots', position: 'left'}
       ],
     },
     footer: {
@@ -56,20 +53,20 @@ const config = {
           title: 'Follow us',
           items: [
             {
-              alt: 'AI <3 IanaIO Logo',
+              alt: 'AI <3 Proud America',
               label: 'X',
-              href: 'https://x.com/_ianaio', 
+              href: 'https://x.com/proudamericaus', 
               width: 25,
               height: 25,
             },
           ],
 	},
         {
-          title: 'Community',
+          title: 'Shop',
           items: [
             {
-              label: 'Discord',
-              href: 'https://discord.com/channels/1247475712001314857/1247475712001314860',
+              label: '#',
+              href: '#',
             },
           ],
         },
@@ -81,20 +78,20 @@ const config = {
               to: '/blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/ianaio/ianaio',
+              label: '#',
+              href: '#',
             },
           ],
         },
       ],
       logo: {
         alt: 'IanaIO logo',
-        src: 'img/ianaio-logo.webp',
-        href: 'https://www.iana.io',
+        src: 'img/proudamericaus.png',
+        href: 'https://www.proudamerica.us',
         width: 27.83,
         height: 32,
       },
-      copyright: `Copyright © ${new Date().getFullYear()} IanaIO, Inc.`, // You can also put own HTML here
+      copyright: `Copyright © ${new Date().getFullYear()} Proud America ★ American Made ★ American Owned, Inc.`, // You can also put own HTML here
     },
     prism: {
       theme: lightCodeTheme,

@@ -27,7 +27,6 @@
 .hero__title,.title_f1Hy {
     font-size: 3rem;
     color: #b31942;
-    font-family: serif;
 }
 
 .hero__subtitle {
@@ -44,7 +43,7 @@ html[data-theme='dark'] .hero__title,.title_f1Hy {
 }
 
 html[data-theme='dark'] .hero__subtitle {
-  color: red;
+  color: white;
 }
 
 /* PROUDAMERICA CSS */
@@ -80,16 +79,11 @@ html[data-theme='dark'] .hero__subtitle {
     --ifm-hero-background-color: #0a3161;
     --ifm-hero-text-color: var(--ifm-font-color-base-inverse)
 }
-/* CONTENT BG DARK WHITE
+
 main {
     padding: 2rem 3em;
     background-color: beige;
 }
-
-html[data-theme='dark'] .main {
-  color: red;
-  background-color: black;
-} */
 
 .footer--dark {
     --ifm-footer-background-color: #b31942;
@@ -103,10 +97,6 @@ html[data-theme='dark'] .main {
     flex: 1 0 auto;
     flex-direction: column;
     background-color: beige;
-}
-
-html[data-theme='dark'] .mainWrapper_z2l0 {
-  background-color: #0a3161;
 }
 
 .footer__copyright {
@@ -130,39 +120,5 @@ a:hover {
 .footer__link-item:hover {
     color: #0a3161;
 }
-/* HERE */
-html[data-theme='dark'] .footer__link-item:hover {
-  color: beige;
-}
-
-/* DARK MODE PROUDAMERICAUS */
-
-[data-theme='dark'] {
-  --ifm-color-primary: #b31942;
-  --ifm-color-primary-dark: #e68700;
-  --ifm-color-primary-darker: #d98000;
-  --ifm-color-primary-darkest: #b36900;
-  --ifm-color-primary-light: #ffa11a;
-  --ifm-color-primary-lighter: #ffa626;
-  --ifm-color-primary-lightest: #ffb64d;
-  --ifm-code-font-size: 95%;
-}
-
-.announcementBarContent_xLdY,.navbar__title {
-    color: beige;
-    flex: 1 1 auto;
-    font-family: serif;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 

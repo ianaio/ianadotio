@@ -3,17 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "author": "Jaroslaw Cichon <dev@iana.io>",
-  "description": "IanaIO TypeScript docusaurus document hosted on the RustWasm backend",
+  "description": "IanaIO wwwproudmericaus website",
   "repository": {
   "type": "git",
-  "url": "https://github.com/ianaio/website"
+  "url": "https://github.com/ianaio/website/tree/wwwproudamericaus"
   },
   "bugs": {
   "url": "https://github.com/ianaio/website/issues"
   },
   "keywords": [
     "typescript",
-    "document",
+    "proudamerica",
     "ianaio",
     "rustwasm"
   ],
